@@ -1,3 +1,7 @@
+<?php
+require 'config.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,47 +49,24 @@
 
       <div class="right">
         <div class="reserve-card">
-      <h3>Reserve Your PureSqueeze</h3>
-      <form id="reserve-form" novalidate="">
-        <div class="price-field">
-          <span>Price</span>
-          <span>$5</span>
-        </div>
+          <h3 class="reserve-title">Reserve Your PureSqueeze</h3>
+          <form id="payment-form">
+            <div class="price-field">
+              <span>Price</span>
+              <span>$5</span>
+            </div>
 
-        <div class="field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Enter your email" required="" class="touched">
-          <div class="error-text" data-error-for="email">Enter a valid email address.</div>
-        </div>
+            <div class="field">
+              <label>Payment Details</label>
+              <div id="payment-element"></div>
+              <div class="error-text" id="payment-message"></div>
+            </div>
 
-        <div class="field">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required="" inputmode="tel">
-          <div class="error-text" data-error-for="phone"></div>
+            <button type="submit" class="btn btn-lime btn-block">
+              Pay Now
+            </button>
+          </form>
         </div>
-
-        <div class="field">
-          <label for="card">Card Number</label>
-          <input type="text" id="card" name="card" placeholder="Enter your card number" required="" inputmode="numeric" maxlength="19" autocomplete="cc-number">
-          <div class="error-text" data-error-for="card"></div>
-        </div>
-
-        <div class="field-row">
-          <div class="field">
-            <label for="cvc">CVC</label>
-            <input type="text" id="cvc" name="cvc" placeholder="---" required="" inputmode="numeric" maxlength="4" autocomplete="cc-csc">
-            <div class="error-text" data-error-for="cvc"></div>
-          </div>
-          <div class="field">
-            <label for="exp">Expiration Date</label>
-            <input type="text" id="exp" name="exp" placeholder="MM / YY" required="" inputmode="numeric" maxlength="7" autocomplete="cc-exp">
-            <div class="error-text" data-error-for="exp"></div>
-          </div>
-        </div>
-
-        <button type="submit" class="btn btn-lime btn-block">Pay Now</button>
-      </form>
-    </div>
       </div>
     </div>
   </section>
@@ -153,32 +134,32 @@
 
     <div class="benefits-grid">
       <div class="benefit-card">
-        <img src="images/Gut-Health.png" alt="">
+        <img src="images/Gut-Health.png" alt="Promotes Gut Health">
         <div class="benefit-label">Gut Health</div>
       </div>
 
       <div class="benefit-card">
-        <img src="images/Glowing.png" alt="">
+        <img src="images/Glowing.png" alt="Enhances Glowing Skin">
         <div class="benefit-label">Glowing Skin</div>
       </div>
 
       <div class="benefit-card">
-        <img src="images/Natural.png" alt="">
+        <img src="images/Natural.png" alt="Provides Natural Energy">
         <div class="benefit-label">Natural Energy</div>
       </div>
 
       <div class="benefit-card">
-        <img src="images/Immune.png" alt="">
+        <img src="images/Immune.png" alt="Supports Immune System">
         <div class="benefit-label">Immune Support</div>
       </div>
 
       <div class="benefit-card">
-        <img src="images/Antioxidant.png" alt="">
+        <img src="images/Antioxidant.png" alt="Provides Antioxidant Protection">
         <div class="benefit-label">Antioxidant Protection</div>
       </div>
 
       <div class="benefit-card">
-        <img src="images/Deep-Hydration.png" alt="">
+        <img src="images/Deep-Hydration.png" alt="Deep Hydration Benefits">
         <div class="benefit-label">Deep Hydration</div>
       </div>
     </div>
@@ -218,6 +199,10 @@
 
 
 
+  <script src="https://js.stripe.com/v3/"></script>
+  <script>
+    const STRIPE_PUBLISHABLE_KEY = "<?php echo STRIPE_PUBLISHABLE_KEY; ?>";
+  </script>
   <script src="script.js"></script>
 </body>
 

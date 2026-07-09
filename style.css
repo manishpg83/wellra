@@ -1471,35 +1471,79 @@ button {
 .price-line { font-size: 1.05rem; font-weight: 600; }
 .price-line .old { text-decoration: line-through; opacity: .7; margin-left: 10px; }
 .price-line .vip-price { color: var(--lime); font-weight: 800; }
-
+/* 
 .reserve-card {
   background: #fff;
   color: var(--ink);
   border-radius: var(--radius-lg);
   padding: 32px;
   box-shadow: 0 20px 50px rgba(0,0,0,.25);
-}
-.reserve-card h3 { font-size: 1.3rem; }
-.field { margin-bottom: 18px; }
-.field label { display: block; font-weight: 700; font-size: .85rem; margin-bottom: 6px; }
-.field input {
-  width: 100%;
-  border: 1px solid #e2e0da;
-  background: #f7f6f2;
-  border-radius: var(--radius-sm);
-  padding: 13px 14px;
-  font-size: .95rem;
-}
+} */
+
 .field input:invalid.touched { border-color: #d9534f; }
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.reserve-card {
+    width: 420px;
+    max-width: 100%;
+    padding: 30px;
+    background: #f5f5f5;
+    border-radius: 12px;
+    color: #111; /* Default text color */
+}
+
+.reserve-card h3,
+.reserve-card label,
+.reserve-card span,
+.reserve-card p,
+.reserve-card .price-field {
+    color: #111 !important;
+}
+
+.field {
+    margin-bottom: 18px;
+}
+
+.field label {
+    display: block;
+    font-weight: 700;
+    font-size: .85rem;
+    margin-bottom: 6px;
+    color: #111 !important;
+}
+
+.field input {
+    width: 100%;
+    border: 1px solid #e2e0da;
+    background: #f7f6f2;
+    color: #111;
+    border-radius: var(--radius-sm);
+    padding: 13px 14px;
+    font-size: .95rem;
+}
+
+.field input::placeholder {
+    color: #777;
+}
+
 .price-field {
-  display: flex; align-items: center; justify-content: space-between;
-  border-left: 4px solid var(--lime);
-  background: #f7f6f2;
-  border-radius: var(--radius-sm);
-  padding: 13px 16px;
-  margin-bottom: 18px;
-  font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    color: #111;
+    padding: 14px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.price-field span {
+    color: #111 !important;
+}
+#payment-element{
+    width:100%;
+    margin:20px 0;
+}
+.reserve-title {
+    margin-bottom: 25px;
 }
 .error-text { color: #c0392b; font-size: .78rem; margin-top: 4px; min-height: 1em; }
 
