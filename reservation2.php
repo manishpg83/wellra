@@ -97,36 +97,118 @@ require 'config.php';
     <div class="gallery-scroll">
 
       <div class="gallery-card">
-        <img src="images/gallery1.png" alt="">
+        <img src="images/reservation1.png" alt="">
       </div>
 
       <div class="gallery-card">
-        <img src="images/gallery2.png" alt="">
+        <img src="images/reservation2.png" alt="">
       </div>
 
       <div class="gallery-card">
-        <img src="images/gallery3.png" alt="">
+        <img src="images/reservation3.png" alt="">
       </div>
 
       <div class="gallery-card">
-        <img src="images/gallery4.png" alt="">
+        <img src="images/reservation4.png" alt="">
       </div>
 
       <div class="gallery-card">
-        <img src="images/gallery5.png" alt="">
+        <img src="images/reservation5.png" alt="">
       </div>
 
       <div class="gallery-card">
-        <img src="images/gallery6.png" alt="">
+        <img src="images/reservation6.png" alt="">
       </div>
 
       <div class="gallery-card">
-        <img src="images/gallery7.png" alt="">
+        <img src="images/reservation7.png" alt="">
       </div>
 
     </div>
   </section>
+    <!-- =========================================
+    Feature Cards Section
+    ========================================== -->
 
+        <section class="feature-section py-5">
+
+            <div class="container">
+
+                <div class="row g-4">
+
+                    <!-- Card 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card">
+                            <img src="images/feat_citrus.png" alt="Works on Every Citrus Fruit" class="img-fluid">
+
+                            <div class="feature-overlay">
+                                <h5>Works on Every Citrus Fruit</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card">
+                            <img src="images/feat_nopulp.png" alt="Maximize Pure Citrus Juice With No Pulp"
+                                class="img-fluid">
+
+                            <div class="feature-overlay">
+                                <h5>Maximize Pure Citrus Juice With No Pulp</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card">
+                            <img src="images/feat_dishwasher.png" alt="Dishwasher-Safe Components" class="img-fluid">
+
+                            <div class="feature-overlay">
+                                <h5>Dishwasher-Safe Components</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card">
+                            <img src="images/feat_motor.png" alt="Powerful Induction Motor" class="img-fluid">
+
+                            <div class="feature-overlay">
+                                <h5>Powerful Induction<br> Motor</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card">
+                            <img src="images/feat_bpa.png" alt="100% BPA-Free, Food-Safe Materials" class="img-fluid">
+
+                            <div class="feature-overlay">
+                                <h5>100% BPA-Free, Food-Safe Materials</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card">
+                            <img src="images/feat_durable.png" alt="Built With Durable Material And Thoughtful Design"
+                                class="img-fluid">
+
+                            <div class="feature-overlayy">
+                                <h5>Built With Durable Material<br> And Thoughtful Design</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
   <script src="https://js.stripe.com/v3/"></script>
   <script>
       const STRIPE_PUBLISHABLE_KEY = "<?php echo STRIPE_PUBLISHABLE_KEY; ?>";
