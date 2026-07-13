@@ -243,18 +243,18 @@ button {
 .top-form input,
 .email-box input,
 .reserve-form input {
-  transition: box-shadow 0.2s ease, background-color 0.2s ease;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
 }
 
 .top-form button,
 .email-box button,
 .reserve-form button {
-  transition: background-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.15s ease, opacity 0.2s ease;
 }
 
-.top-form button:hover,
-.email-box button:hover,
-.reserve-form button:hover {
+.top-form button:hover:not(:disabled),
+.email-box button:hover:not(:disabled),
+.reserve-form button:hover:not(:disabled) {
   background: #c2e777;
   transform: translateY(-1px);
 }
@@ -267,89 +267,91 @@ button {
   transform: none;
 }
 
-.top-form.has-error,
-.email-box.has-error,
-.reserve-form.has-error {
-  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.9), 0 10px 24px rgba(231, 76, 60, 0.22);
-}
-
+/* Error → mark the INPUT with a clean ring, not the whole row */
 .top-form.has-error input,
 .email-box.has-error input,
 .reserve-form.has-error input {
-  background-color: #fff7f5;
-  color: #2d2d2d;
+  background-color: #fff;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.12);
+}
+
+.top-form.has-error input::placeholder,
+.email-box.has-error input::placeholder,
+.reserve-form.has-error input::placeholder {
+  color: #c0392b;
+  opacity: 0.7;
+}
+
+/* Message → solid tooltip anchored under the field */
+.email-error,
+.email-error * {
+  color: #fff !important;
+  text-decoration: none !important;
 }
 
 .email-error {
   position: absolute;
   left: 0;
-  top: calc(100% + 7px);
+  top: calc(100% + 8px);
   z-index: 5;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  min-height: 24px;
+  gap: 7px;
   margin: 0;
-  padding: 5px 9px;
-  border: 1px solid rgba(231, 76, 60, 0.24);
-  border-radius: 999px;
-  background: rgba(255, 246, 244, 0.98);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
-  color: #c0392b;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: #2d2d2d;
   font-size: 13px;
-  font-weight: 700;
-  line-height: 1.15;
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: none;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
   opacity: 0;
   transform: translateY(-4px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.18s ease, transform 0.18s ease;
   pointer-events: none;
   white-space: nowrap;
 }
 
+.email-error::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: -4px;
+  width: 9px;
+  height: 9px;
+  background: #2d2d2d;
+  transform: rotate(45deg);
+  border-radius: 2px;
+}
+
 .email-error::before {
-  content: "!";
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 15px;
-  height: 15px;
+  content: "";
+  flex: 0 0 auto;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background: #e74c3c;
-  color: #fff;
-  font-size: 11px;
-  line-height: 1;
+  background: #c2e777;
 }
 
 .email-error.show {
   opacity: 1;
   transform: translateY(0);
 }
-
-.invite-shake {
-  animation: invite-shake 0.28s ease;
-}
+/* .invite-shake {
+  animation: invite-shake 0.3s ease;
+} */
 
 @keyframes invite-shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-
-  25% {
-    transform: translateX(-4px);
-  }
-
-  75% {
-    transform: translateX(4px);
-  }
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-4px); }
+  40%, 80% { transform: translateX(4px); }
 }
 
 @media (max-width: 480px) {
   .email-error {
-    right: 0;
-    justify-content: center;
-    text-align: center;
     white-space: normal;
+    max-width: 92vw;
   }
 }
 .email-box {
