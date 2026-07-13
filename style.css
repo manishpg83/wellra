@@ -24,7 +24,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  padding: 16px 40px;
+  padding: 15px 40px;
   flex-wrap: wrap;
   width: 100%;
   margin: 0 auto;
@@ -40,7 +40,7 @@ body {
   letter-spacing: -0.32px;
   text-align: justify;
   text-decoration: underline;
-  color: #fff;
+  color:#AFAFAF;
 }
 
 .top-bar span {
@@ -75,7 +75,7 @@ body {
 }
 
 .top-form button {
-  min-width: 220px;
+  min-width: 190px;
   height: 100%;
   border: none;
   border-radius: 8px;
@@ -190,7 +190,7 @@ button {
 .intro {
   font-size: 24px;
   font-weight: 400;
-  line-height: 42px;
+  line-height: 0px;
   letter-spacing: -0.48px;
   text-transform: uppercase;
   margin: 0;
@@ -278,6 +278,7 @@ button {
   flex: 1;
   display: flex;
   justify-content: flex-end;
+  margin: 30px 0px 20px 90px;
 }
 
 .juicer {
@@ -566,7 +567,7 @@ button {
   align-items: center;
   justify-content: center;
   padding: 0 16px;
-  background: rgba(158, 158, 158, 0.55);
+  background: #949494; /* rgba(158, 158, 158, 0.55); */
   mix-blend-mode: multiply;
   border-radius: 0 0 12px 12px;
   color: #fff;
