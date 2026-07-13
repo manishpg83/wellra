@@ -18,7 +18,7 @@
       </p>
 
       <div class="top-form">
-        <input type="email" placeholder="Type your email here">
+        <input type="email" placeholder="Type your email here" required>
         <button>GET LAUNCH INVITE</button>
       </div>
     </div>
@@ -44,8 +44,10 @@
         </p>
 
         <div class="email-box">
-          <input type="email" placeholder="Type your email here">
-          <button onclick="window.location.href='reservation2.php';">GET LAUNCH INVITE</button>
+          <form action="create-checkout-session.php" method="POST">
+            <input type="email" name="email" placeholder="Type your email here" required>
+            <button type="submit">GET LAUNCH INVITE</button>
+          </form>
         </div>
 
         <p class="offer">
@@ -427,8 +429,7 @@
               stroke-linejoin="round" />
           </svg>
         </summary>
-        <div class="faq-answer">The PureSqueeze is built for citrus — oranges, lemons, limes, and grapefruits of nearly
-          any size, with no adapters needed.</div>
+        <div class="faq-answer">You can juice all types of citrus fruits, from small limes and lemons to large oranges, grapefruits, and even pomelos.</div>
       </details>
       <details class="faq-item">
         <summary>Do I need to peel the fruit before juicing?
@@ -437,8 +438,7 @@
               stroke-linejoin="round" />
           </svg>
         </summary>
-        <div class="faq-answer">No peeling needed — simply cut the fruit in half and place it in the chute. The rind
-          stays out of your glass.</div>
+        <div class="faq-answer">No peeling required! Simply cut your fruit in half or smaller pieces, if necessary, insert it into the chute, and Wellra does the rest - extracting pure juice while keeping peels separate.</div>
       </details>
       <details class="faq-item">
         <summary>Is it easy to clean?
@@ -447,7 +447,7 @@
               stroke-linejoin="round" />
           </svg>
         </summary>
-        <div class="faq-answer">Yes. Four removable parts are all dishwasher safe, so clean-up takes about a minute.
+        <div class="faq-answer">Yes! The Wellra PureSqueeze was designed for convenience. The detachable parts are dishwasher-safe, and the non-slip base ensures easy cleanup without spills.
         </div>
       </details>
       <details class="faq-item">
@@ -457,8 +457,7 @@
               stroke-linejoin="round" />
           </svg>
         </summary>
-        <div class="faq-answer">PureSqueeze uses a professional-grade induction motor for consistent, powerful
-          squeezing.</div>
+        <div class="faq-answer">It's equipped with a 120V, 60Hz Induction motor, delivering commercial-grade power in a compact, household-friendly size.</div>
       </details>
       <details class="faq-item">
         <summary>Is the juicer made with safe materials?
@@ -467,7 +466,7 @@
               stroke-linejoin="round" />
           </svg>
         </summary>
-        <div class="faq-answer">All food-contact components are made from 100% BPA-free, food-safe materials.</div>
+        <div class="faq-answer">Absolutely. Every component that touches your juice is BPA-free, ensuring safe, toxin-free juicing every time.</div>
       </details>
       <details class="faq-item">
         <summary>Can Wellra juice apples or carrots?
@@ -476,8 +475,7 @@
               stroke-linejoin="round" />
           </svg>
         </summary>
-        <div class="faq-answer">PureSqueeze is optimized specifically for citrus fruits and is not designed for hard
-          produce like apples or carrots.</div>
+        <div class="faq-answer">No. Wellra is specifically designed for citrus fruits and is not intended for hard fruits and produces such as apples, carrots, or other non-citrus fruits and produces.</div>
       </details>
       <details class="faq-item">
         <summary>Is there a warranty?
@@ -486,8 +484,7 @@
               stroke-linejoin="round" />
           </svg>
         </summary>
-        <div class="faq-answer">Yes, backers will receive full warranty details in their Kickstarter updates ahead of
-          shipping.</div>
+        <div class="faq-answer">Yes, all Wellra PureSqueeze juicers come with a 1-year limited warranty covering manufacturer defects and motor performance.</div>
       </details>
       <details class="faq-item">
         <summary>When will I receive my juicer?
@@ -496,8 +493,7 @@
               stroke-linejoin="round" />
           </svg>
         </summary>
-        <div class="faq-answer">Estimated delivery timing will be shared once the Kickstarter campaign launches and
-          funding closes.</div>
+        <div class="faq-answer">We plan to begin fulfillment shortly after the Kickstarter campaign closes. All backers will receive regular updates with production and shipping timelines.</div>
       </details>
       <details class="faq-item">
         <summary>Can I get a refund or cancel my pledge?
@@ -506,8 +502,7 @@
               stroke-linejoin="round" />
           </svg>
         </summary>
-        <div class="faq-answer">Pledges can be adjusted or cancelled any time before the campaign closes, per
-          Kickstarter's policies.</div>
+        <div class="faq-answer">You can adjust or cancel your pledge anytime before the campaign ends. Once production begins, we'll no longer be able to offer refunds, but we're committed to transparency throughout the process.</div>
       </details>
       <details class="faq-item">
         <summary>How can I stay updated on the project?
@@ -516,7 +511,7 @@
               stroke-linejoin="round" />
           </svg>
         </summary>
-        <div class="faq-answer">Reserve your spot with your email above and follow us on Kickstarter for every update.
+        <div class="faq-answer">Follow our Kickstarter updates and join our VIP Facebook Group for exclusive behind-the-scenes access, product tips, and early discount opportunities.
         </div>
       </details>
     </div>
@@ -532,10 +527,10 @@
           when we launch on Kickstarter
         </p>
 
-        <form class="reserve-form">
+        <div class="reserve-form">
           <input type="email" placeholder="Type your email here" required>
           <button type="submit">GET LAUNCH INVITE</button>
-        </form>
+        </div>
       </div>
     </div>
   </section>

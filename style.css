@@ -222,7 +222,30 @@ button {
   margin: 0;
   color: #fff;
 }
+.email-box form {
+  display: contents;
+}
 
+.top-form,
+.reserve-form {
+  position: relative;   
+}
+
+.email-error {
+  position: absolute;
+  left: 2px;
+  top: 100%;            
+  margin-top: 6px;
+  color: #e74c3c;
+  font-size: 13px;
+  opacity: 0;                 
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.email-error.show {
+  opacity: 1;
+}
 .email-box {
   display: flex;
   align-items: center;

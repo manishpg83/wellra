@@ -1,0 +1,607 @@
+* {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        margin: 0;
+        min-height: 100%;
+    }
+
+    body {
+        color: #ffffff;
+        background: #1c1c1c;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    a {
+        color: inherit;
+    }
+
+    .thankyou-page {
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    .hero-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 754px;
+        padding: 0 68px;
+        background:
+            linear-gradient(253.79deg, #7a808b 3.91%, #1c1e29 93.08%);
+    }
+
+    .hero-shell {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        max-width: 1304px;
+        height: 659px;
+    }
+
+    .hero-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 94px;
+    }
+
+    .hero-content {
+        position: relative;
+        display: grid;
+        grid-template-columns: 621px 514px;
+        gap: 129px;
+        width: 100%;
+        max-width: 1264px;
+        height: 565px;
+    }
+
+    .brand-logo {
+        display: block;
+        width: 236px;
+        height: auto;
+    }
+
+    .hero-copy {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 621px;
+        margin-top: 128px;
+    }
+
+    .eyebrow {
+        width: 621px;
+        margin: 0 0 65px;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+
+    .hero-copy h1 {
+        width: 621px;
+        margin: 0 0 49px;
+        font-size: 55px;
+        font-weight: 400;
+        line-height: 63px;
+        letter-spacing: -0.02em;
+        color: #ffffff;
+    }
+
+    .kickstarter-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 308px;
+        height: 43px;
+        padding: 20px;
+        border: 0;
+        border-radius: 4px;
+        background: #b7d869;
+        color: #1f2322;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1;
+        text-decoration: none;
+        transition: background-color 160ms ease, transform 160ms ease;
+    }
+
+    .kickstarter-button:hover,
+    .kickstarter-button:focus-visible {
+        background: #c1e474;
+        transform: translateY(-1px);
+    }
+
+    .product-image {
+        width: 514px;
+        max-width: 100%;
+        height: 565px;
+        object-fit: contain;
+    }
+
+    .vip-footer {
+        background: #222222;
+    }
+
+    .vip-inner {
+        width: min(100% - 136px, 1234px);
+        max-width: 1234px;
+        height: 462px;
+        margin: 0 auto;
+        padding: 108px 0 52px;
+    }
+
+    .vip-intro {
+        display: grid;
+        grid-template-columns: 398px 618px;
+        align-items: start;
+        justify-content: space-between;
+        gap: 80px;
+    }
+
+    .vip-intro h2 {
+        width: 398px;
+        margin: 0;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 42px;
+        letter-spacing: 0;
+        color: #ffffff;
+    }
+
+    .vip-intro p {
+        width: 618px;
+        margin: 0;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 38px;
+        letter-spacing: -0.02em;
+        text-align: justify;
+        color: #ffffff;
+    }
+
+    .vip-intro strong {
+        color: #a9d957;
+        font-size: 33px;
+        font-weight: 600;
+        line-height: 0;
+    }
+
+    .footer-rule {
+        width: 100%;
+        height: 1px;
+        margin: 69px 0 43px;
+        background: #8b8b8b;
+    }
+
+    .footer-bottom {
+        display: grid;
+        grid-template-columns: 1fr 200px 1fr;
+        align-items: start;
+        gap: 42px;
+        min-height: 60px;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .footer-bottom p {
+        margin: 0;
+    }
+
+    .footer-bottom p:last-child {
+        text-align: right;
+    }
+
+    .powered-by {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        margin-top: -1px;
+        text-align: center;
+    }
+
+    .powered-by span {
+        font-size: 16px;
+    }
+
+    .powered-by img {
+        width: 112px;
+        height: auto;
+    }
+
+    @media (max-width: 1024px) {
+        .hero-section {
+            padding-right: 40px;
+            padding-left: 40px;
+        }
+
+        .hero-shell {
+            height: 620px;
+        }
+
+        .hero-content {
+            grid-template-columns: minmax(400px, 1fr) minmax(360px, 420px);
+            gap: 48px;
+            height: 526px;
+        }
+
+        .hero-copy {
+            width: auto;
+            margin-top: 112px;
+        }
+
+        .eyebrow,
+        .hero-copy h1 {
+            width: auto;
+        }
+
+        .hero-copy h1 {
+            font-size: 48px;
+            line-height: 56px;
+        }
+
+        .product-image {
+            width: 420px;
+            height: 526px;
+        }
+
+        .vip-inner {
+            width: min(100% - 80px, 1234px);
+        }
+
+        .vip-intro {
+            grid-template-columns: minmax(280px, 398px) minmax(420px, 618px);
+            gap: 48px;
+        }
+
+        .vip-intro h2,
+        .vip-intro p {
+            width: auto;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero-section {
+            align-items: flex-start;
+            height: auto;
+            min-height: 542px;
+            padding: 14px 18px 0;
+        }
+
+        .hero-shell {
+            align-items: center;
+            height: auto;
+            max-width: 640px;
+        }
+
+        .hero-header {
+            height: auto;
+        }
+
+        .brand-logo {
+            width: 96px;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            min-height: 0;
+            margin-top: 9px;
+            text-align: center;
+        }
+
+        .hero-copy {
+            order: 2;
+            width: auto;
+            max-width: 621px;
+            margin-top: -22px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            width: auto;
+            margin-bottom: 10px;
+            font-size: 10px;
+            line-height: 12px;
+        }
+
+        .hero-copy h1 {
+            width: auto;
+            margin-bottom: 18px;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 21px;
+        }
+
+        .kickstarter-button {
+            width: min(100%, 284px);
+            height: 26px;
+            padding: 0 14px;
+            font-size: 11px;
+        }
+
+        .product-image {
+            order: 1;
+            width: min(78vw, 250px);
+            max-width: 250px;
+            height: auto;
+            margin-top: 0;
+        }
+
+        .vip-inner {
+            height: 300px;
+            min-height: 0;
+            width: auto;
+            padding: 9px 15px 14px;
+        }
+
+        .vip-intro {
+            grid-template-columns: 1fr;
+            gap: 4px;
+            justify-content: stretch;
+            text-align: center;
+        }
+
+        .vip-intro h2 {
+            width: auto;
+            font-size: 17px;
+            line-height: 21px;
+        }
+
+        .vip-intro p {
+            width: auto;
+            max-width: 260px;
+            margin: 0 auto;
+            font-size: 11px;
+            line-height: 14px;
+            text-align: center;
+        }
+
+        .footer-rule {
+            margin: 4px 0 8px;
+        }
+
+        .footer-bottom {
+            grid-template-columns: 1fr;
+            gap: 6px;
+            min-height: 0;
+            text-align: center;
+            font-size: 11px;
+            line-height: 14px;
+        }
+
+        .footer-bottom p:last-child {
+            text-align: center;
+        }
+    }
+
+   /* ==========================
+   MOBILE RESPONSIVE
+========================== */
+
+@media (max-width:768px){
+
+    .hero-section{
+        height:auto;
+        min-height:auto;
+        padding:20px 18px 0;
+        align-items:flex-start;
+    }
+
+    .hero-shell{
+        height:auto;
+        align-items:center;
+        max-width:390px;
+    }
+
+    .hero-header{
+        height:auto;
+        margin-bottom:15px;
+    }
+
+    .brand-logo{
+        width:160px;
+        height:auto;
+    }
+
+    .hero-content{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:25px;
+        height:auto;
+        margin:0;
+        text-align:center;
+        padding-bottom: 50px;
+    }
+
+    /* Product Image */
+
+    .product-image{
+        order:1;
+        width:230px;
+        max-width:75%;
+        height:auto;
+        margin:0;
+    }
+
+    /* Text */
+
+    .hero-copy{
+        order:2;
+        width:100%;
+        margin:0;
+        align-items:center;
+        text-align:center;
+    }
+
+    .eyebrow{
+        width:auto;
+        margin:10px 0 18px;
+        font-size:20px;
+        font-weight:500;
+        line-height:1;
+    }
+
+    .hero-copy h1{
+        width:auto;
+        margin:0 0 28px;
+        font-size:24px;
+        font-weight:700;
+        line-height:30px;
+    }
+
+    /* Button */
+
+    .kickstarter-button{
+        width:100%;
+        max-width:360px;
+        height:52px;
+        padding:0 20px;
+        font-size:16px;
+        border-radius:5px;
+    }
+
+    /* Footer */
+
+    .vip-inner{
+        width:100%;
+        height:auto;
+        padding:35px 18px 25px;
+    }
+
+    .vip-intro{
+        display:block;
+        text-align:center;
+    }
+
+    .vip-intro h2{
+        width:auto;
+        margin-bottom:15px;
+        font-size:20px;
+        line-height:28px;
+    }
+
+    .vip-intro p{
+        width:auto;
+        max-width:340px;
+        margin:auto;
+        font-size:16px;
+        line-height:24px;
+        text-align:center;
+    }
+
+    .vip-intro strong{
+        font-size:20px;
+    }
+
+    .footer-rule{
+        margin:28px 0;
+    }
+
+    .footer-bottom{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:14px;
+        text-align:center;
+        font-size:13px;
+    }
+
+    .footer-bottom p:last-child{
+        text-align:center;
+    }
+
+    .powered-by{
+        margin:0;
+    }
+
+    .powered-by img{
+        width:90px;
+    }
+
+}
+
+/* ==========================
+   SMALL MOBILE
+========================== */
+
+@media (max-width:480px){
+
+    .hero-section{
+        padding:22px 18px 0;
+    }
+
+    .brand-logo{
+        width:155px;
+    }
+
+    .product-image{
+        width:215px;
+    }
+
+    .eyebrow{
+        margin:8px 0 15px;
+        font-size:14px;
+    }
+
+    .hero-copy h1{
+        font-size:20px;
+        line-height:27px;
+        margin-bottom:25px;
+    }
+
+    .kickstarter-button{
+        width:100%;
+        max-width:360px;
+        height:52px;
+        font-size:15px;
+    }
+
+    .vip-inner{
+        padding:30px 18px 20px;
+    }
+
+    .vip-intro h2{
+        font-size:20px;
+        line-height:24px;
+    }
+
+    .vip-intro p{
+        font-size:16px;
+        line-height:22px;
+    }
+
+    .vip-intro strong{
+        font-size:16px;
+    }
+
+    .footer-bottom{
+        font-size:16px;
+        line-height:18px;
+    }
+
+    .powered-by img{
+        width:80px;
+    }
+
+    .powered-by{
+    order:1;
+    text-align:center;
+}
+/* Logo below */
+
+
+}
