@@ -842,7 +842,7 @@ button {
   flex: 1;
 }
 
-.feature-card  .media video
+.feature-card  .media img
 {
   width: 777px;
   height: 576px;
@@ -853,12 +853,12 @@ button {
   margin: 40px 0px 40px 40px ;
 }
 
-.feature-card.reverse .media video
+.feature-card.reverse .media img
 {
   width: 690px;
 }
 
-.feature-card.orange .media video
+.feature-card.orange .media img
 {
   width: 576px;
 }
@@ -2005,13 +2005,3 @@ border-radius: 25px;
   .hero-form input, .cta-form input { width: 100%; }
   .hero-form .btn, .cta-form .btn { width: 100%; }
 }
-
-
-
-
-
-
-
-
-
-
