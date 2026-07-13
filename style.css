@@ -109,11 +109,19 @@ body {
 @media (max-width: 480px) {
   .top-form {
     flex-direction: column;
+    height: auto;
   }
 
   .top-form input,
   .top-form button {
     width: 100%;
+  }
+
+  .email-error {
+    right: 0;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
   }
 }
 
@@ -227,24 +235,122 @@ button {
 }
 
 .top-form,
+.email-box,
 .reserve-form {
-  position: relative;   
+  position: relative;
+}
+
+.top-form input,
+.email-box input,
+.reserve-form input {
+  transition: box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.top-form button,
+.email-box button,
+.reserve-form button {
+  transition: background-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+.top-form button:hover,
+.email-box button:hover,
+.reserve-form button:hover {
+  background: #c2e777;
+  transform: translateY(-1px);
+}
+
+.top-form button:disabled,
+.email-box button:disabled,
+.reserve-form button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+}
+
+.top-form.has-error,
+.email-box.has-error,
+.reserve-form.has-error {
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.9), 0 10px 24px rgba(231, 76, 60, 0.22);
+}
+
+.top-form.has-error input,
+.email-box.has-error input,
+.reserve-form.has-error input {
+  background-color: #fff7f5;
+  color: #2d2d2d;
 }
 
 .email-error {
   position: absolute;
-  left: 2px;
-  top: 100%;            
-  margin-top: 6px;
-  color: #e74c3c;
+  left: 0;
+  top: calc(100% + 7px);
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 24px;
+  margin: 0;
+  padding: 5px 9px;
+  border: 1px solid rgba(231, 76, 60, 0.24);
+  border-radius: 999px;
+  background: rgba(255, 246, 244, 0.98);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+  color: #c0392b;
   font-size: 13px;
-  opacity: 0;                 
-  transition: opacity 0.2s ease;
+  font-weight: 700;
+  line-height: 1.15;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
   pointer-events: none;
+  white-space: nowrap;
+}
+
+.email-error::before {
+  content: "!";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #e74c3c;
+  color: #fff;
+  font-size: 11px;
+  line-height: 1;
 }
 
 .email-error.show {
   opacity: 1;
+  transform: translateY(0);
+}
+
+.invite-shake {
+  animation: invite-shake 0.28s ease;
+}
+
+@keyframes invite-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-4px);
+  }
+
+  75% {
+    transform: translateX(4px);
+  }
+}
+
+@media (max-width: 480px) {
+  .email-error {
+    right: 0;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+  }
 }
 .email-box {
   display: flex;
@@ -255,7 +361,7 @@ button {
   background: #ebebeb;
   border-radius: 10px;
   padding-left: 18px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .email-box input {
@@ -1492,7 +1598,7 @@ background-color: #707275;
   background: #f2f2f2;
   border-radius: 10px;
   padding-left: 18px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .reserve-form input {
@@ -1578,6 +1684,33 @@ background-color: #707275;
     width: 100%;
     padding: 15px;
     border-radius: 0 0 8px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .email-box {
+    flex-direction: column;
+    height: auto;
+    padding-left: 0;
+    background: transparent;
+    gap: 8px;
+  }
+
+  .email-box input {
+    width: 100%;
+    height: 48px;
+    min-height: 48px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: #ebebeb;
+  }
+
+  .email-box button {
+    width: 100%;
+    height: 48px;
+    min-height: 48px;
+    border-radius: 10px;
   }
 }
 
