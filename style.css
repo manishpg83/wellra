@@ -1067,6 +1067,11 @@ background-color: #707275;
   text-align: center;
 }
 
+.struggle-media {
+  position: relative;
+  width: 100%;
+}
+
 .struggle-card img {
   width: 100%;
   aspect-ratio: 616 / 484;
@@ -1074,6 +1079,32 @@ background-color: #707275;
   border-radius: 25px;
   display: block;
   filter: grayscale(100%);
+}
+
+.struggle-x {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.struggle-x::before,
+.struggle-x::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 12px;
+  background: #ff5c5c;
+  border-radius: 7px;
+}
+
+.struggle-x::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.struggle-x::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .struggle-card h4 {
