@@ -14,6 +14,7 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+/* ========================= TOP BAR ========================= */
 .top-bar {
   width: 100%;
   background: #000;
@@ -40,7 +41,7 @@ body {
   letter-spacing: -0.32px;
   text-align: justify;
   text-decoration: underline;
-  color:#AFAFAF;
+  color: #AFAFAF;
 }
 
 .top-bar span {
@@ -75,7 +76,7 @@ body {
 }
 
 .top-form button {
-  min-width: 190px;
+  min-width: 220px;
   height: 100%;
   border: none;
   border-radius: 8px;
@@ -88,6 +89,7 @@ body {
   cursor: pointer;
 }
 
+/* --- responsive (from CSS 1) --- */
 @media (max-width: 768px) {
   .top-bar-inner {
     flex-direction: column;
@@ -98,6 +100,7 @@ body {
   .top-form {
     width: 100%;
     max-width: 420px;
+    flex-direction: column;
   }
 
   .top-form input {
@@ -108,15 +111,13 @@ body {
 
 @media (max-width: 480px) {
   .top-form {
-    flex-direction: column;
-    height: auto;
+    flex-direction: row;
   }
 
   .top-form input,
   .top-form button {
-    width: 100%;
+    width: 400px;
   }
-
   .email-error {
     right: 0;
     justify-content: center;
@@ -125,6 +126,7 @@ body {
   }
 }
 
+/* generic input/button */
 input {
   width: 280px;
   padding: 14px 16px;
@@ -144,7 +146,7 @@ button {
   cursor: pointer;
 }
 
-/* HERO */
+/* ========================= HERO ========================= */
 .hero {
   position: relative;
   min-height: calc(100vh - 100px);
@@ -230,6 +232,8 @@ button {
   margin: 0;
   color: #fff;
 }
+
+/* ---- email box + interactive states (from CSS 2) ---- */
 .email-box form {
   display: contents;
 }
@@ -267,7 +271,6 @@ button {
   transform: none;
 }
 
-/* Error → mark the INPUT with a clean ring, not the whole row */
 .top-form.has-error input,
 .email-box.has-error input,
 .reserve-form.has-error input {
@@ -282,7 +285,6 @@ button {
   opacity: 0.7;
 }
 
-/* Message → solid tooltip anchored under the field */
 .email-error,
 .email-error * {
   color: #fff !important;
@@ -338,9 +340,6 @@ button {
   opacity: 1;
   transform: translateY(0);
 }
-/* .invite-shake {
-  animation: invite-shake 0.3s ease;
-} */
 
 @keyframes invite-shake {
   0%, 100% { transform: translateX(0); }
@@ -354,6 +353,7 @@ button {
     max-width: 92vw;
   }
 }
+
 .email-box {
   display: flex;
   align-items: center;
@@ -418,11 +418,11 @@ button {
   height: auto;
 }
 
-/* TABLET */
+/* ---- TABLET (from CSS 1) ---- */
 @media (max-width: 991px) {
   .top-bar {
     flex-direction: column;
-    padding: 18px 20px;
+    padding: 1px 20px 59px 30px;
   }
 
   .hero {
@@ -432,6 +432,13 @@ button {
   .hero-content {
     flex-direction: column;
     text-align: center;
+  }
+
+  .left {
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    gap: 22px;
   }
 
   .desc {
@@ -452,12 +459,12 @@ button {
   }
 }
 
-/* MOBILE */
+/* ---- MOBILE (from CSS 1) ---- */
 @media (max-width: 576px) {
 
   .top-form,
   .email-box {
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     gap: 10px;
   }
@@ -465,8 +472,9 @@ button {
   input,
   .email-box input,
   button {
-    width: 100%;
+    width: 100px;
     border-radius: 6px;
+    flex-direction: column;
   }
 
   .logo {
@@ -478,20 +486,57 @@ button {
   }
 
   .left h1 {
-    font-size: 32px;
+    font-size: 36px;
+    line-height: 1.12;
+  }
+
+  .left h4 {
+    font-size: 18px;
+    line-height: 24px;
   }
 
   .desc {
-    font-size: 15px;
+    font-size: 17px;
+    line-height: 26px;
   }
 
   .juicer {
-    width: 300px;
+    width: 100%;
+    max-width: 360px;
   }
 }
-/* =========================
-  onther section 
-========================= */
+
+/* Clean stacking for the hero email box on very small screens
+   (kept from CSS 2 so the field doesn't collapse to 100px) */
+@media (max-width: 480px) {
+  .email-box {
+    flex-direction: column;
+    height: auto;
+    padding-left: 0;
+    background: transparent;
+    gap: 8px;
+  }
+
+  .email-box input {
+    width: 100%;
+    height: 48px;
+    min-height: 48px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: #ebebeb;
+    padding: 20px 20px 30px 20px;
+  }
+
+  .email-box button {
+    width: 100%;
+    height: 48px;
+    min-height: 48px;
+    border-radius: 10px;
+  }
+}
+
+/* ========================= HOW IT WORKS ========================= */
 .how-it-works {
   background: #f6f3ef;
   padding-bottom: 60px;
@@ -519,10 +564,7 @@ button {
   margin: 55px 0 45px;
 }
 
-/* =========================
-  step section
-========================= */
-
+/* ========================= STEPS ========================= */
 .steps-section {
   width: 100%;
   padding: 60px 40px;
@@ -573,17 +615,14 @@ button {
   letter-spacing: -0.48px;
   color: #000;
 }
-.step-section h2{
 
+.step-section h2 {
   font-size: 22px;
   font-weight: 700;
   color: #111;
 }
 
-/* Tablet */
-
-@media (max-width:992px) {
-
+@media (max-width: 992px) {
   .steps-section {
     padding: 50px 25px;
   }
@@ -599,13 +638,9 @@ button {
     border-radius: 16px;
     display: block;
   }
-
 }
 
-/* Mobile */
-
-@media (max-width:768px) {
-
+@media (max-width: 768px) {
   .steps-grid {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -626,12 +661,9 @@ button {
   .step-card h4 {
     font-size: 18px;
   }
-
 }
 
-/* ==========================
-   video Section
-========================== */
+/* ========================= VIDEO ========================= */
 .video-section {
   width: 100%;
   overflow: hidden;
@@ -646,12 +678,7 @@ button {
   display: block;
 }
 
-/* ==========================
-   Feature Section
-========================== */
-
-
-
+/* ========================= FEATURES ========================= */
 .features-section {
   width: 100%;
   padding: 80px 40px;
@@ -695,8 +722,7 @@ button {
   right: 0;
   bottom: 0;
   height: 68px;
-  background: linear-gradient(
-269deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.55));
+  background: linear-gradient(269deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.55));
   border-radius: 0 0 12px 12px;
   display: flex;
   align-items: center;
@@ -709,9 +735,7 @@ button {
   text-align: center;
 }
 
-/* Tablet */
-@media (max-width:992px) {
-
+@media (max-width: 992px) {
   .features-section {
     padding: 60px 24px;
   }
@@ -728,41 +752,37 @@ button {
   .tile-label {
     font-size: 18px;
   }
-
 }
 
-/* Mobile */
-@media (max-width:768px) {
-
+@media (max-width: 768px) {
   .features-section {
-    padding: 50px 20px;
+    padding: 50px 18px;
   }
 
   .feature-grid {
-    grid-template-columns: 1fr;
-    gap: 22px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
 
   .feature-tile {
-    min-height: 320px;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
   }
 
   .tile-label {
-    font-size: 17px;
-    padding: 18px 16px;
+    height: auto;
+    min-height: 44px;
+    font-size: 13px;
+    line-height: 1.25;
+    padding: 8px 8px;
   }
-
 }
 
-/* ==========================
-   Every Citrus. Zero Adapters.
-========================== */
-
+/* ========================= CITRUS / FEATURE CARDS ========================= */
 .citrus-section {
   width: min(1304px, 96%);
   margin: 0 auto;
   padding: 60px 0 0px;
-  /* box-shadow:0px 4px 20.3px rgb(0 0 0 / 43%);  */
 }
 
 .citrus-section h2 {
@@ -789,7 +809,8 @@ button {
 .feature-card.reverse {
   flex-direction: row-reverse;
 }
-.media-reverse{
+
+.media-reverse {
   width: 690px;
   height: 583px;
   min-height: 330px;
@@ -801,40 +822,32 @@ button {
 
 .img-mint{
   background-color: #94C1B9;
-    padding: 20px 100px 0px 200px;
-    width: 690px;
-    height: 503px;
-    padding-top: 90px;
-
-}
-.img-orange{
-   background-color:#FFA500;
-    padding: 150px 20px 0px 50px;
-    /* padding: 20px 100px 0px 100px; */
-    width: 688px;
-    height: 503px;
-}
-.green .img-bg{
-    background-color: #B6C26C;
-    padding: 25px 20px 0px 100px;
-    width: 554  px;
-    height: 503px;
+  padding: 20px 100px 0px 200px;
+  width: 690px;
+  height: 503px;
+  padding-top: 90px;
 }
 
-/* .img-bg{
-    background-color: #B6C26C;
-    padding: 20px 100px 0px 100px;
-    width: 688px;
-    height: 503px;
-    padding-top: 25px;
-} */
+.img-orange {
+  background-color: #FFA500;
+  padding: 150px 20px 0px 50px;
+  width: 688px;
+  height: 503px;
+}
+
+.green .img-bg {
+  background-color: #B6C26C;
+  padding: 25px 20px 0px 100px;
+  width: 554px;
+  height: 503px;
+}
+
 .feature-card .content {
   flex: 0 0 42%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 17px;
-  /* padding: 45px; */
 }
 
 .feature-card .media {
@@ -848,9 +861,9 @@ button {
   height: 576px;
   min-height: 330px;
   display: block;
-  object-fit: cover;  
+  object-fit: cover;
   border-radius: 25px;
-  margin: 40px 0px 40px 40px ;
+  margin: 40px 0px 40px 40px;
 }
 
 .feature-card.reverse .media img
@@ -862,26 +875,24 @@ button {
 {
   width: 576px;
 }
-/* .feature-card .media img{
- width: 452px;
-    height: 553px;
-    display: block;
-    border-radius: 25px;
-} */
-.media-gray{
-   display: flex;
-    justify-content: flex-end; /* Align image to the right */
-    margin: 40px 40px 40px 0px;
+
+.media-gray {
+  display: flex;
+  justify-content: flex-end;
+  margin: 40px 40px 40px 0px;
 }
-.gray-1{
-border-radius: 25px;
+
+.gray-1 {
+  border-radius: 25px;
 }
-.gray-bg{
-    background-color: #878B90;
-    padding: 170px 20px 0px 100px;
-    width: 812px;
-    height: 503px;
+
+.gray-bg {
+  background-color: #878B90;
+  padding: 170px 20px 0px 100px;
+  width: 812px;
+  height: 503px;
 }
+
 .fruit-badge {
   position: absolute;
   left: 16px;
@@ -918,7 +929,7 @@ border-radius: 25px;
 
 .feature-card.orange p {
   max-width: 688px;
- }
+}
 
 .green {
   background: linear-gradient(255deg, rgb(219, 235, 158) 2%, rgb(208, 222, 96) 67%);
@@ -936,20 +947,64 @@ border-radius: 25px;
   background: linear-gradient(142deg, rgb(171, 176, 183) 5.3%, rgb(105, 105, 105) 87%);
 }
 
+/* ---- responsive (from CSS 1, with specificity patches) ---- */
 @media (max-width: 992px) {
   .feature-card {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 0;
+    height: auto;
   }
 
   .feature-card.reverse {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .feature-card .content {
     flex: none;
     padding: 32px;
-    
+  }
+
+  /* stop fixed-width media boxes from overflowing the screen */
+  .feature-card .media,
+  .media-gray {
+    width: 100%;
+    margin: 0;
+    display: block;
+    justify-content: center;
+  }
+
+  .img-mint,
+  .img-orange,
+  .img-bg,
+  .green .img-bg,            /* patch: beat CSS 2's higher-specificity rule */
+  .gray-bg {
+    width: 100%;
+    height: auto;
+    padding: 24px;
+  }
+
+  .media-reverse {
+    width: 100%;
+    height: auto;
+    margin: 0 0 24px 0 !important;
+  }
+
+  .feature-card .media video,
+  .feature-card.reverse .media video,   /* patch */
+  .feature-card.orange .media video {   /* patch */
+    width: 100%;
+    height: auto;
+    margin: 24px 0;
+  }
+
+  .img-mint img,
+  .img-orange img,
+  .img-bg img,
+  .gray-bg img,
+  .gray-1 {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
   }
 
   .feature-card .media video,
@@ -977,18 +1032,22 @@ border-radius: 25px;
   }
 
   .feature-card .content {
-    padding: 24px;
+    padding: 6px 24px 28px;
+    text-align: center;
+    align-items: center;
   }
 
   .feature-card h3 {
-    font-size: 28px;
+    font-size: 22px;
   }
 
   .feature-card p {
     font-size: 16px;
+    text-align: center;
   }
 }
 
+/* ========================= BENEFITS ========================= */
 .benefits-section {
   width: 100%;
   background: #faf8f4;
@@ -1041,8 +1100,7 @@ border-radius: 25px;
   right: 0;
   bottom: 0;
   height: 68px;
-  background: linear-gradient(
-269deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.55));
+  background: linear-gradient(269deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.55));
   border-radius: 0 0 12px 12px;
   display: flex;
   align-items: center;
@@ -1055,7 +1113,6 @@ border-radius: 25px;
   text-align: center;
 }
 
-/* Tablet */
 @media (max-width: 992px) {
   .benefits-section {
     padding: 55px 25px;
@@ -1071,10 +1128,9 @@ border-radius: 25px;
   }
 }
 
-/* Mobile */
 @media (max-width: 576px) {
   .benefits-section {
-    padding: 40px 16px;
+    padding: 40px 18px;
   }
 
   .benefits-section h2 {
@@ -1084,37 +1140,36 @@ border-radius: 25px;
   }
 
   .benefits-grid {
-    grid-template-columns: 1fr;
-    gap: 22px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .benefit-card {
+    aspect-ratio: 4 / 3;
   }
 
   .benefit-label {
-    height: 55px;
-    font-size: 18px;
-    line-height: 1.3;
+    height: auto;
+    min-height: 44px;
+    font-size: 13px;
+    line-height: 1.25;
+    padding: 8px 8px;
   }
 }
 
-
-
+/* ========================= SPECIFICATIONS ========================= */
 .specifications {
-
   width: 100%;
   padding: 80px 30px;
-
   background: linear-gradient(243deg, rgb(122, 128, 139) 3.9%, rgb(28, 30, 41) 93.08%);
-
 }
 
 .spec-overlay {
-
   max-width: 1300px;
   margin: auto;
-
 }
 
 .specifications h2 {
-
   text-align: center;
   color: #fff;
   font-size: 36px;
@@ -1122,64 +1177,90 @@ border-radius: 25px;
   font-weight: 700;
   letter-spacing: -1px;
   margin-bottom: 48px;
-
 }
 
 .spec-grid {
-
   max-width: 1101px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
 }
 
 .spec-item {
-
   padding: 30px 41px;
   color: #fff;
-
   border-right: 1px solid rgba(255, 255, 255, .18);
   border-bottom: 1px solid rgba(255, 255, 255, .18);
-
 }
 
 .spec-item:nth-child(even) {
-
   border-right: none;
-
 }
 
 .spec-item:nth-last-child(-n+2) {
-
   border-bottom: none;
-
 }
 
 .spec-item h4 {
-
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
   margin-bottom: 4px;
-
 }
 
 .spec-item p {
-
   font-size: 24px;
   line-height: 32px;
   font-weight: 400;
   color: #fff;
-
 }
 
-/* ==========================
-  Struggle behind every sip
+/* responsive (from CSS 1 — CSS 2 was missing these) */
+@media (max-width: 992px) {
+  .specifications {
+    padding: 60px 22px;
+  }
 
-========================== */
+  .specifications h2 {
+    font-size: 30px;
+    margin-bottom: 34px;
+  }
 
+  .spec-item {
+    padding: 24px 22px;
+  }
 
+  .spec-item h4,
+  .spec-item p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  .specifications {
+    padding: 44px 14px;
+  }
+
+  .specifications h2 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 28px;
+  }
+
+  .spec-item {
+    padding: 18px 12px;
+    text-align: center;
+  }
+
+  .spec-item h4,
+  .spec-item p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+/* ========================= STRUGGLE ========================= */
 .struggle-section {
   width: 100%;
   padding: 61px 69px 74px 68px;
@@ -1264,8 +1345,7 @@ border-radius: 25px;
   color: #000;
 }
 
-@media(max-width:992px) {
-
+@media (max-width: 992px) {
   .struggle-section {
     padding: 50px 25px;
   }
@@ -1281,11 +1361,9 @@ border-radius: 25px;
   .struggle-title {
     font-size: 34px;
   }
-
 }
 
-@media(max-width:576px) {
-
+@media (max-width: 576px) {
   .struggle-section {
     padding: 40px 16px;
   }
@@ -1306,14 +1384,9 @@ border-radius: 25px;
   .struggle-card h4 {
     font-size: 20px;
   }
-
 }
 
-/* ==========================
- viedo
-
-========================== */
-
+/* ========================= JUICE ========================= */
 .juice-section {
   width: 100%;
   padding: 70px 20px;
@@ -1356,10 +1429,7 @@ border-radius: 25px;
   object-fit: cover;
 }
 
-/* Tablet */
-
-@media (max-width:992px) {
-
+@media (max-width: 992px) {
   .juice-section h2 {
     font-size: 34px;
   }
@@ -1372,13 +1442,9 @@ border-radius: 25px;
   .juice-card {
     max-width: 330px;
   }
-
 }
 
-/* Mobile */
-
-@media (max-width:768px) {
-
+@media (max-width: 768px) {
   .juice-section {
     padding: 50px 18px;
   }
@@ -1398,37 +1464,9 @@ border-radius: 25px;
     width: 100%;
     max-width: 360px;
   }
-
 }
 
-
-
-
-/* ---------- FAQ ---------- */
-/* .faq-list { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
-.faq-item {
-  background: #fff;
-  border-radius: var(--radius-sm);
-  padding: 4px 22px;
-  box-shadow: 0 1px 3px rgba(0,0,0,.06);
-}
-.faq-item summary {
-  list-style: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 0;
-  font-weight: 600;
-  gap: 16px;
-}
-.faq-item summary::-webkit-details-marker { display: none; }
-.faq-item .chev { transition: transform .2s ease; flex-shrink: 0; }
-.faq-item[open] .chev { transform: rotate(180deg); }
-.faq-item .faq-answer { padding: 0 0 20px; opacity: .85; } */
-
-/* FAQ Section */
-
+/* ========================= FAQ ========================= */
 .faq-section {
   width: 100%;
   background: #faf8f4;
@@ -1502,8 +1540,7 @@ border-radius: 25px;
   color: #555;
 }
 
-/* Tablet */
-@media(max-width:768px) {
+@media (max-width: 768px) {
   .faq-section {
     padding: 45px 12px;
   }
@@ -1519,8 +1556,7 @@ border-radius: 25px;
   }
 }
 
-/* Mobile */
-@media(max-width:480px) {
+@media (max-width: 480px) {
   .faq-section {
     padding: 38px 10px;
   }
@@ -1550,8 +1586,7 @@ border-radius: 25px;
   }
 }
 
-/* image Section */
-
+/* ========================= RESERVE (image banner) ========================= */
 .reserve-section {
   width: 100%;
   min-height: 300px;
@@ -1561,14 +1596,6 @@ border-radius: 25px;
   background-blend-mode: soft-light;
   position: relative;
 }
-
-/* .reserve-section::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(20, 22, 20, .45);
-    z-index: 1;
-} */
 
 .reserve-overlay {
   width: 100%;
@@ -1608,7 +1635,6 @@ border-radius: 25px;
 }
 
 .reserve-form {
-  /* max-width: 520px; */
   width: 100%;
   height: 43px;
   margin: 0 auto;
@@ -1647,9 +1673,7 @@ border-radius: 25px;
   white-space: nowrap;
 }
 
-/* Tablet */
-@media(max-width:768px) {
-
+@media (max-width: 768px) {
   .reserve-overlay {
     padding: 140px 20px;
   }
@@ -1668,9 +1692,7 @@ border-radius: 25px;
   }
 }
 
-/* Mobile */
-@media(max-width:520px) {
-
+@media (max-width: 520px) {
   .reserve-overlay {
     padding: 90px 16px;
   }
@@ -1706,34 +1728,7 @@ border-radius: 25px;
   }
 }
 
-@media (max-width: 480px) {
-  .email-box {
-    flex-direction: column;
-    height: auto;
-    padding-left: 0;
-    background: transparent;
-    gap: 8px;
-  }
-
-  .email-box input {
-    width: 100%;
-    height: 48px;
-    min-height: 48px;
-    padding: 0 16px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    background: #ebebeb;
-  }
-
-  .email-box button {
-    width: 100%;
-    height: 48px;
-    min-height: 48px;
-    border-radius: 10px;
-  }
-}
-
-/* footer Section */
+/* ========================= FOOTER ========================= */
 .vip-footer {
   width: 100%;
   background: #222;
@@ -1752,7 +1747,6 @@ border-radius: 25px;
 .vip-top .highlight {
   color: #c8f24a;
   font-size: 21px;
-  /* Bigger */
   font-weight: 800;
   line-height: 1.8;
   display: inline-block;
@@ -1796,7 +1790,7 @@ border-radius: 25px;
   color: #fff;
 }
 
-.vip-bottom>p:last-child {
+.vip-bottom > p:last-child {
   text-align: right;
 }
 
@@ -1813,8 +1807,7 @@ border-radius: 25px;
   height: auto;
 }
 
-/* Mobile */
-@media(max-width:768px) {
+@media (max-width: 768px) {
   .vip-footer {
     padding: 45px 20px 35px;
   }
@@ -1843,19 +1836,18 @@ border-radius: 25px;
     gap: 18px;
   }
 
-  .vip-bottom>p:last-child {
+  .vip-bottom > p:last-child {
     text-align: center;
   }
 }
 
-
-
-/* ---------- Reservation page ---------- */
+/* ========================= RESERVATION PAGE ========================= */
 .reserve-hero {
   background: linear-gradient(120deg, var(--navy-dark), var(--navy-light));
   color: #fff;
   padding: 40px 24px 70px;
 }
+
 .reserve-hero-grid {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -1864,7 +1856,11 @@ border-radius: 25px;
   gap: 40px;
   align-items: center;
 }
-.reserve-hero-left .logo { margin-bottom: 28px; }
+
+.reserve-hero-left .logo {
+  margin-bottom: 28px;
+}
+
 .reserve-hero-left h2 {
   text-transform: uppercase;
   letter-spacing: .06em;
@@ -1872,28 +1868,45 @@ border-radius: 25px;
   color: var(--lime);
   margin-bottom: 6px;
 }
-.reserve-hero-left img { margin: 20px 0; border-radius: var(--radius-md); }
-.price-line { font-size: 1.05rem; font-weight: 600; }
-.price-line .old { text-decoration: line-through; opacity: .7; margin-left: 10px; }
-.price-line .vip-price { color: var(--lime); font-weight: 800; }
-/* 
-.reserve-card {
-  background: #fff;
-  color: var(--ink);
-  border-radius: var(--radius-lg);
-  padding: 32px;
-  box-shadow: 0 20px 50px rgba(0,0,0,.25);
-} */
 
-.field input:invalid.touched { border-color: #d9534f; }
-.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.reserve-hero-left img {
+  margin: 20px 0;
+  border-radius: var(--radius-md);
+}
+
+.price-line {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.price-line .old {
+  text-decoration: line-through;
+  opacity: .7;
+  margin-left: 10px;
+}
+
+.price-line .vip-price {
+  color: var(--lime);
+  font-weight: 800;
+}
+
+.field input:invalid.touched {
+  border-color: #d9534f;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
 .reserve-card {
-    width: 420px;
-    max-width: 100%;
-    padding: 30px;
-    background: #f5f5f5;
-    border-radius: 12px;
-    color: #111; /* Default text color */
+  width: 420px;
+  max-width: 100%;
+  padding: 30px;
+  background: #f5f5f5;
+  border-radius: 12px;
+  color: #111;
 }
 
 .reserve-card h3,
@@ -1901,70 +1914,85 @@ border-radius: 25px;
 .reserve-card span,
 .reserve-card p,
 .reserve-card .price-field {
-    color: #111 !important;
+  color: #111 !important;
 }
 
 .field {
-    margin-bottom: 18px;
+  margin-bottom: 18px;
 }
 
 .field label {
-    display: block;
-    font-weight: 700;
-    font-size: .85rem;
-    margin-bottom: 6px;
-    color: #111 !important;
+  display: block;
+  font-weight: 700;
+  font-size: .85rem;
+  margin-bottom: 6px;
+  color: #111 !important;
 }
 
 .field input {
-    width: 100%;
-    border: 1px solid #e2e0da;
-    background: #f7f6f2;
-    color: #111;
-    border-radius: var(--radius-sm);
-    padding: 13px 14px;
-    font-size: .95rem;
+  width: 100%;
+  border: 1px solid #e2e0da;
+  background: #f7f6f2;
+  color: #111;
+  border-radius: var(--radius-sm);
+  padding: 13px 14px;
+  font-size: .95rem;
 }
 
 .field input::placeholder {
-    color: #777;
+  color: #777;
 }
 
 .price-field {
-    display: flex;
-    justify-content: space-between;
-    background: #fff;
-    color: #111;
-    padding: 14px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  color: #111;
+  padding: 14px;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .price-field span {
-    color: #111 !important;
+  color: #111 !important;
 }
-#payment-element{
-    width:100%;
-    margin:20px 0;
+
+#payment-element {
+  width: 100%;
+  margin: 20px 0;
 }
+
 .reserve-title {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
-.error-text { color: #c0392b; font-size: .78rem; margin-top: 4px; min-height: 1em; }
+
+.error-text {
+  color: #c0392b;
+  font-size: .78rem;
+  margin-top: 4px;
+  min-height: 1em;
+}
 
 .lifestyle-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 4px;
 }
-.lifestyle-strip img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/3; }
 
-/* ---------- Thanks page ---------- */
+.lifestyle-strip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+
+/* ========================= THANKS PAGE ========================= */
 .thanks-hero {
   background: linear-gradient(120deg, var(--navy-dark), var(--navy-light));
   color: #fff;
   padding: 60px 24px 90px;
 }
+
 .thanks-grid {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -1973,7 +2001,11 @@ border-radius: 25px;
   align-items: center;
   gap: 40px;
 }
-.thanks-grid .logo { margin-bottom: 44px; }
+
+.thanks-grid .logo {
+  margin-bottom: 44px;
+}
+
 .thanks-eyebrow {
   text-transform: uppercase;
   letter-spacing: .1em;
@@ -1981,19 +2013,9 @@ border-radius: 25px;
   color: var(--lime);
   margin-bottom: 10px;
 }
-.thanks-grid h1 { font-size: clamp(2rem, 4vw, 2.6rem); }
-.thanks-grid img { border-radius: var(--radius-lg); }
 
-/* ---------- Responsive ---------- */
-@media (max-width: 900px) {
-  .hero-grid, .reserve-hero-grid, .thanks-grid { grid-template-columns: 1fr; }
-  .hero-image { order: -1; }
-  .steps-grid, .feature-grid, .benefits-grid, .struggle-grid, .compare-grid { grid-template-columns: repeat(2, 1fr); }
-  .panel, .specs { grid-template-columns: 1fr; }
-  .panel-media { min-height: 220px; }
-  .specs-media { min-height: 220px; }
-  .vip-inner { grid-template-columns: 1fr; text-align: center; }
-  .lifestyle-strip { grid-template-columns: repeat(2, 1fr); }
+.thanks-grid h1 {
+  font-size: clamp(2rem, 4vw, 2.6rem);
 }
 
 @media (max-width: 620px) {
@@ -2004,4 +2026,57 @@ border-radius: 25px;
   .hero-form, .cta-form { flex-direction: column; }
   .hero-form input, .cta-form input { width: 100%; }
   .hero-form .btn, .cta-form .btn { width: 100%; }
+.thanks-grid img {
+  border-radius: var(--radius-lg);
+}
+
+/* responsive for reservation & thanks (from CSS 1) */
+@media (max-width: 768px) {
+  .reserve-hero {
+    padding: 32px 18px 50px;
+  }
+
+  .reserve-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .reserve-card {
+    width: 100%;
+    padding: 24px;
+  }
+
+  .thanks-hero {
+    padding: 45px 18px 60px;
+  }
+
+  .thanks-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .thanks-grid .logo {
+    margin-bottom: 24px;
+  }
+
+  .lifestyle-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .field-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .reserve-card {
+    padding: 20px;
+  }
+
+  .lifestyle-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+  }
 }
