@@ -826,7 +826,7 @@ button {
 
 .img-mint{
   background-color: #94C1B9;
-  padding: 20px 100px 0px 200px;
+  padding: 20px 100px 0px 100px;
   width: 690px;
   height: 503px;
   padding-top: 90px;
@@ -875,6 +875,7 @@ button {
 .feature-card.reverse .media img
 {
   width: 690px;
+  margin: 0px;
 }
 
 .feature-card.orange .media img
