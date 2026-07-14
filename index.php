@@ -212,7 +212,7 @@ require 'include/config.php';
     <div class="feature-card orange">
 
       <div class="media">
-        <img src="images/grapfruit.gif" alt="grapfruit" class="juicer">        
+        <img src="images/grapfruit.gif" alt="grapfruit">        
       </div>
 
       <div class="content">

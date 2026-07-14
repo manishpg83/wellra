@@ -36,7 +36,8 @@
       "Bash(curl -s http://localhost/projects/wellra/index.php)",
       "mcp__figma__get_metadata",
       "Bash(php -l \"C:\\\\xampp\\\\htdocs\\\\projects\\\\wellra\\\\index.php\")",
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "mcp__figma__get_screenshot"
     ]
   }
 }

@@ -833,7 +833,7 @@ button {
 }
 
 .img-orange {
-  background-color: #FFA500;
+  background-color: #D89D44;
   padding: 150px 20px 0px 50px;
   width: 688px;
   height: 503px;
@@ -899,10 +899,80 @@ button {
   height: 503px;
 }
 
-/* Prevent the fixed Figma-width content boxes above from overflowing
-   the card and getting clipped at in-between (laptop) viewport widths,
-   between the tablet breakpoint and the full desktop design width. */
+/* Keep the desktop two-column design balanced while it scales down on laptops. */
 @media (min-width: 993px) and (max-width: 1305px) {
+  .citrus-section {
+    width: 100%;
+    padding: 56px 18px 0;
+  }
+
+  .citrus-section .feature-card {
+    width: min(100%, 1180px);
+    height: clamp(430px, 49vw, 590px);
+    margin-bottom: 44px;
+    border-radius: 25px;
+  }
+
+  .citrus-section .feature-card .media,
+  .citrus-section .feature-card .media-gray {
+    flex: 1 1 56%;
+    min-width: 0;
+    margin: 0;
+  }
+
+  .citrus-section .feature-card .content {
+    flex: 0 1 44%;
+    min-width: 0;
+  }
+
+  .citrus-section .feature-card .media img,
+  .citrus-section .feature-card.reverse .media img,
+  .citrus-section .feature-card.orange .media img,
+  .citrus-section .media-reverse,
+  .citrus-section .media-reverse img,
+  .citrus-section .media-gray img,
+  .citrus-section .gray-1 {
+    width: 100%;
+    height: calc(100% - 56px);
+    min-height: 0;
+    max-width: none;
+    margin: 28px 0;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+
+  .citrus-section .feature-card:not(.reverse) .media img {
+    margin-left: 28px;
+    width: calc(100% - 28px);
+  }
+
+  .citrus-section .feature-card.reverse .media img,
+  .citrus-section .media-reverse {
+    width: calc(100% - 28px);
+  }
+  
+  .citrus-section .media-reverse img {
+    margin-right: 28px !important;
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+  }
+
+  .citrus-section .feature-card.orange .media img {
+    width: calc(100% - 28px);
+  }
+
+  .citrus-section .media-gray {
+    display: block;
+  }
+
+  .citrus-section .media-gray img,
+  .citrus-section .gray-1 {
+    margin-left: 0;
+    margin-right: 28px;
+    width: calc(100% - 28px);
+  }
+
   .img-mint,
   .img-orange,
   .img-bg,
@@ -910,6 +980,41 @@ button {
   .gray-bg {
     width: 100%;
     max-width: 100%;
+    height: calc(100% - 56px);
+    min-height: 0;
+    margin: 28px 0;
+    padding: clamp(26px, 4vw, 70px) clamp(24px, 4vw, 64px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0;
+  }
+
+  .green .img-bg,
+  .img-orange {
+    margin-right: 28px;
+    width: calc(100% - 28px);
+  }
+
+  .img-mint,
+  .gray-bg {
+    margin-left: 28px;
+    width: calc(100% - 28px);
+  }
+
+  .citrus-section .feature-card h3 {
+    font-size: clamp(32px, 4.1vw, 48px);
+    line-height: 1.08;
+    letter-spacing: -0.7px;
+  }
+
+  .citrus-section .feature-card p,
+  .citrus-section .feature-card.orange p {
+    max-width: 100%;
+    font-size: clamp(18px, 2.4vw, 29px);
+    line-height: 1.22;
+    letter-spacing: -0.35px;
+    text-align: left;
   }
 }
 
@@ -952,19 +1057,19 @@ button {
 }
 
 .green {
-  background: linear-gradient(255deg, rgb(219, 235, 158) 2%, rgb(208, 222, 96) 67%);
+  background: linear-gradient(180deg, #DBEB9E 0%, #D0DE60 100%);
 }
 
 .mint {
-  background: linear-gradient(106deg, rgb(191, 236, 232) 0.6%, rgb(146, 213, 192) 84%);
+  background: linear-gradient(180deg, #BFECE8 0%, #92D5C0 100%);
 }
 
 .orange {
-  background: linear-gradient(221deg, rgb(253, 205, 98) 0.5%, rgb(255, 161, 59) 73%);
+  background: linear-gradient(90deg, #FDCB61 0%, #FFA740 100%);
 }
 
 .gray {
-  background: linear-gradient(142deg, rgb(171, 176, 183) 5.3%, rgb(105, 105, 105) 87%);
+  background: linear-gradient(180deg, #ABB0B7 0%, #7E8082 100%);
 }
 
 /* ---- responsive (from CSS 1, with specificity patches) ---- */
@@ -1047,30 +1152,251 @@ button {
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 769px) and (max-width: 992px) {
   .citrus-section {
-    padding: 40px 0;
+    width: 100%;
+    padding: 52px 20px 24px;
   }
 
-  .feature-card {
+  .citrus-section > h2 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -0.5px;
+  }
+
+  .citrus-section .feature-card,
+  .citrus-section .feature-card.reverse {
+    flex-direction: column;
+    width: min(100%, 620px);
+    height: auto;
+    margin: 0 auto 28px;
+    padding: 12px;
     border-radius: 20px;
   }
 
-  .feature-card .content {
-    padding: 6px 24px 28px;
+  .citrus-section .feature-card .media,
+  .citrus-section .feature-card.reverse .media,
+  .citrus-section .feature-card .media-gray {
+    width: 100%;
+    height: clamp(280px, 42vw, 350px);
+    min-height: 0;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 14px 14px 0 0;
+  }
+
+  .citrus-section .media-reverse {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    margin: 0 !important;
+    overflow: hidden;
+    border-radius: 14px 14px 0 0;
+  }
+
+  .citrus-section .feature-card .media img,
+  .citrus-section .feature-card.reverse .media img,
+  .citrus-section .media-reverse img,
+  .citrus-section .media-gray img,
+  .citrus-section .gray-1 {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    max-width: none;
+    margin: 0;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 14px 14px 0 0;
+  }
+
+  .citrus-section .feature-card .content {
+    width: 100%;
+    padding: 0;
+  }
+
+  .citrus-section .img-bg,
+  .citrus-section .green .img-bg,
+  .citrus-section .img-mint,
+  .citrus-section .img-orange,
+  .citrus-section .gray-bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    min-height: 178px;
+    padding: 28px 34px;
     text-align: center;
-    align-items: center;
+    border-radius: 0 0 14px 14px;
   }
 
-  .feature-card h3 {
-    font-size: 22px;
+  .citrus-section .feature-card h3 {
+    max-width: 520px;
+    margin: 0 auto 12px;
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: -0.5px;
+    text-align: center;
   }
 
-  .feature-card p {
-    font-size: 16px;
+  .citrus-section .feature-card p,
+  .citrus-section .feature-card.orange p {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.2px;
     text-align: center;
   }
 }
+
+@media (max-width: 768px) {
+  .citrus-section {
+    width: 100%;
+    padding: 40px 0;
+  }
+
+  .citrus-section > h2 {
+    margin: 0 0 24px;
+    padding: 0 18px;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: -0.5px;
+    text-align: center;
+  }
+
+  .citrus-section .feature-card,
+  .citrus-section .feature-card.reverse {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    width: 288px;
+    max-width: calc(100% - 36px);
+    height: 327px;
+
+    margin: 0 auto 16px;
+    padding: 7px 7px 0;
+
+    gap: 0;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  /* Image section */
+  .citrus-section .feature-card .media,
+  .citrus-section .feature-card.reverse .media,
+  .citrus-section .feature-card .media-gray {
+    display: block;
+    flex: 0 0 180px;
+
+    width: 100%;
+    height: 180px;
+    min-height: 180px;
+
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    border-radius: 8px 8px 0 0;
+  }
+
+  .citrus-section .media-reverse {
+    width: 100%;
+    height: 180px;
+    margin: 0 !important;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .citrus-section .feature-card .media img,
+  .citrus-section .feature-card.reverse .media img,
+  .citrus-section .media-reverse img,
+  .citrus-section .media-gray img,
+  .citrus-section .gray-1 {
+    display: block;
+
+    width: 100%;
+    height: 180px;
+    max-width: none;
+
+    margin: 0;
+    padding: 0;
+
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+  }
+
+  /* Text section */
+  .citrus-section .feature-card .content {
+    display: block;
+    flex: 1;
+
+    width: 100%;
+    height: auto;
+    min-height: 0;
+
+    margin-bottom: 8px;
+    padding: 0;
+
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+  }
+
+  .citrus-section .img-bg,
+  .citrus-section .green .img-bg,
+  .citrus-section .img-mint,
+  .citrus-section .img-orange,
+  .citrus-section .gray-bg {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    min-height: 0;
+
+    margin: 0;
+    padding: 10px 14px 12px;
+
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .citrus-section .feature-card h3 {
+    width: 100%;
+    max-width: 250px;
+
+    margin: 0 0 6px;
+
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    text-align: center;
+  }
+
+  .citrus-section .feature-card p,
+  .citrus-section .feature-card.orange p {
+    width: 100%;
+    max-width: 250px;
+
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    text-align: center;
+  }
+}
+
 
 /* ========================= BENEFITS ========================= */
 .benefits-section {
@@ -1602,12 +1928,12 @@ button {
   .faq-item summary {
     padding: 12px;
     min-height: 44px;
-    font-size: 13px;
+    font-size: 16px;
   }
 
   .faq-answer {
     padding: 0 12px 16px;
-    font-size: 13px;
+    font-size: 16px;
   }
 }
 
@@ -2137,3 +2463,5 @@ button {
     gap: 3px;
   }
 }
+
+
