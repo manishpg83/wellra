@@ -76,7 +76,7 @@ body {
 }
 
 .top-form button {
-  min-width: 156px;
+  min-width: 157px;
   height: 100%;
   border: none;
   border-radius: 8px;
@@ -105,7 +105,7 @@ body {
 
   .top-form input {
     flex: 1;
-    width: 100%;
+    /* width: 100%; */
   }
 }
 
@@ -472,7 +472,6 @@ button {
   input,
   .email-box input,
   button {
-    width: 100px;
     border-radius: 6px;
     flex-direction: column;
   }
