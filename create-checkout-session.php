@@ -1,18 +1,18 @@
 <?php
-require 'vendor/autoload.php';
 require 'config.php';
+require 'vendor/autoload.php';
 
 \Stripe\Stripe::setApiKey(STRIPE_SECRET_KEY);
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: index.html');
+    header('Location: index.php');
     exit;
 }
 
 $email = trim($_POST['email'] ?? '');
 
 if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    header('Location: index.html?error=email');
+    header('Location: index.php?error=email');
     exit;
 }
 
@@ -43,8 +43,8 @@ $session = \Stripe\Checkout\Session::create([
     'quantity' => 1,
   ]],
   'customer_email' => $email,
-  'success_url' => 'https://briskbraintech.com/projects/wellra/thankyou.html',
-  'cancel_url'  => 'https://briskbraintech.com/projects/wellra/index.html',
+  'success_url' => 'https://briskbraintech.com/projects/wellra/thankyou.php',
+  'cancel_url'  => 'https://briskbraintech.com/projects/wellra/index.php',
 ]);
 
 header('Location: ' . $session->url);
