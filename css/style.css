@@ -2089,6 +2089,12 @@ button {
   .lifestyle-strip {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .struggle-x::before,
+  .struggle-x::after {
+    width: 40%;
+    height: 7px;
+  }
 }
 
 @media (max-width: 480px) {

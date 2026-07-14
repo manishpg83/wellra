@@ -31,7 +31,9 @@
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --virtual-time-budget=4000 --screenshot=\"C:/Users/HP/AppData/Local/Temp/claude/C--xampp-htdocs-projects-wellra/62d61811-9837-4b39-b545-c86998941e5a/scratchpad/specs.png\" --window-size=1440,1700 \"http://localhost/projects/wellra/tmp-scrolltest.html\")",
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --virtual-time-budget=4000 --screenshot=\"C:/Users/HP/AppData/Local/Temp/claude/C--xampp-htdocs-projects-wellra/62d61811-9837-4b39-b545-c86998941e5a/scratchpad/struggle.png\" --window-size=1440,1700 \"http://localhost/projects/wellra/tmp-scrolltest.html\")",
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --virtual-time-budget=4000 --screenshot=\"C:/Users/HP/AppData/Local/Temp/claude/C--xampp-htdocs-projects-wellra/62d61811-9837-4b39-b545-c86998941e5a/scratchpad/juice.png\" --window-size=1440,1700 \"http://localhost/projects/wellra/tmp-scrolltest.html\")",
-      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --virtual-time-budget=4000 --screenshot=\"C:/Users/HP/AppData/Local/Temp/claude/C--xampp-htdocs-projects-wellra/62d61811-9837-4b39-b545-c86998941e5a/scratchpad/faq.png\" --window-size=1440,1700 \"http://localhost/projects/wellra/tmp-scrolltest.html\")"
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --virtual-time-budget=4000 --screenshot=\"C:/Users/HP/AppData/Local/Temp/claude/C--xampp-htdocs-projects-wellra/62d61811-9837-4b39-b545-c86998941e5a/scratchpad/faq.png\" --window-size=1440,1700 \"http://localhost/projects/wellra/tmp-scrolltest.html\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost/projects/wellra/index.php)",
+      "Bash(curl -s http://localhost/projects/wellra/index.php)"
     ]
   }
 }
