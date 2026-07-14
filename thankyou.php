@@ -59,7 +59,7 @@ require 'include/config.php';
                 <div class="vip-intro">
                     <h2>Why Upgrade to VIP?</h2>
                     <p>
-                        Upgrade to VIP for priority access, exclusive early-bird pricing, and up to <strong>42%</strong> savings on Wellra PureSqueeze.
+                        Upgrade to VIP for priority access, exclusive early-bird pricing, and up to <strong>45%</strong> savings on Wellra PureSqueeze.
                     </p>
                 </div>
                 <div class="footer-rule" aria-hidden="true"></div>

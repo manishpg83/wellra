@@ -38,7 +38,7 @@ require 'include/config.php';
     <div class="top-bar-inner">
       <p>
         Pledge $5 to reserve your spot and receive
-        42% off on Wellra when we launch on Kickstarter
+        45% off on Wellra when we launch on Kickstarter
       </p>
 
       <div class="top-form">
@@ -75,7 +75,7 @@ require 'include/config.php';
         </div>
 
         <p class="offer">
-          Reserve your spot for $5 and Get <span>42% off</span>
+          Reserve your spot for $5 and Get <span>45% off</span>
         </p>
       </div>
 
@@ -499,7 +499,7 @@ require 'include/config.php';
       <div class="reserve-content">
         <h2>Join The Reserve List</h2>
         <p>
-          Pledge $5 to reserve your spot and receive 42% off on Wellra
+          Pledge $5 to reserve your spot and receive 45% off on Wellra
           <br>
           when we launch on Kickstarter
         </p>
@@ -517,7 +517,7 @@ require 'include/config.php';
 
       <p>
         Upgrade to VIP for priority access, exclusive early-bird<br>
-        pricing, and up to <span class="highlight">42%</span> savings on
+        pricing, and up to <span class="highlight">45%</span> savings on
         Wellra PureSqueeze.
       </p>
     </div>

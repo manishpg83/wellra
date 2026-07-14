@@ -1,5 +1,5 @@
 <?php
-require 'config.php';
+require 'include/config.php';
 require 'vendor/autoload.php';
 
 \Stripe\Stripe::setApiKey(STRIPE_SECRET_KEY);
