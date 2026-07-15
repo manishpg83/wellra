@@ -30,6 +30,7 @@ require 'include/config.php';
   <link rel="canonical" href="<?php echo BASE_URL;?>" />
   <link rel="icon" href="<?php echo BASE_URL;?>/images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
@@ -511,30 +512,10 @@ require 'include/config.php';
       </div>
     </div>
   </section>
-  <footer class="vip-footer">
-    <div class="vip-top">
-      <h2>Why Upgrade to VIP?</h2>
-
-      <p>
-        Upgrade to VIP for priority access, exclusive early-bird<br>
-        pricing, and up to <span class="highlight">45%</span> savings on
-        Wellra PureSqueeze.
-      </p>
-    </div>
-
-    <div class="footer-line"></div>
-
-    <div class="vip-bottom">
-      <p>Copyright © <?php echo date('Y');?> A Common Thread, Inc. All Rights Reserved</p>
-
-      <div class="powered">
-        <p>Powered by</p>
-        <img src="images/agency20.png" alt="Agency 2.0">
-      </div>
-
-      <p>Privacy Policy | Terms and Conditions</p>
-    </div>
-  </footer>
+  
+  <?php
+  require 'footer.php';
+  ?>
   <script src="js/script.js"></script>
 </body>
 
