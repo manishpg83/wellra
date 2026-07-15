@@ -196,7 +196,7 @@ require 'include/config.php';
 
       <div class="media">
         <div class="media-reverse">          
-          <img src="images/cleaning-diss-assem.gif" alt="Clean-up In A Minute">
+          <img src="images/disassembly-and-cleaning.gif" alt="Clean-up In A Minute">
         </div>
       </div>
 
@@ -212,7 +212,7 @@ require 'include/config.php';
     <div class="feature-card orange">
 
       <div class="media">
-        <img src="images/grapfruit.gif" alt="grapfruit" class="juicer">        
+        <img src="images/grapfruit.gif" alt="grapfruit">        
       </div>
 
       <div class="content">
