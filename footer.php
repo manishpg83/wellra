@@ -8,7 +8,7 @@
     <div class="vip-footer__divider"></div>
 
     <div class="vip-footer__meta">
-      <p class="vip-footer__copyright">Copyright &copy; <?php echo date('Y'); ?> A Common Thread, Inc. All Rights Reserved</p>
+      <p class="vip-footer__copyright">Copyright &copy; <?php echo date('Y'); ?> A Common Thread, Inc. <span class="vip-footer__rights">All Rights Reserved</span></p>
 
       <div class="vip-footer__powered">
         <p>Powered by</p>
