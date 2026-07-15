@@ -905,7 +905,7 @@ button {
    between the tablet breakpoint and the full desktop design width. */
 @media (min-width: 993px) and (max-width: 1305px) {
   /* Prachi work start */
-  /* .citrus-section {
+  .citrus-section {
     width: 100%;
     padding: 56px 18px 0;
   }
@@ -975,7 +975,7 @@ button {
     margin-left: 0;
     margin-right: 28px;
     width: calc(100% - 28px);
-  } */
+  } 
   /* prachi work end */
 
   .img-mint,
@@ -986,7 +986,7 @@ button {
     width: 100%;
     max-width: 100%;
     /* prachi work start */
-    /* height: calc(100% - 56px);
+    height: calc(100% - 56px);
     min-height: 0;
     margin: 28px 0;
     padding: clamp(26px, 4vw, 70px) clamp(24px, 4vw, 64px);
@@ -1020,7 +1020,7 @@ button {
     font-size: clamp(18px, 2.4vw, 29px);
     line-height: 1.22;
     letter-spacing: -0.35px;
-    text-align: left; */
+    text-align: left;
 
     /* prachi work end */
   }
@@ -1274,6 +1274,7 @@ button {
     letter-spacing: -0.2px;
     text-align: center;
   }
+  
 }
 /* prachi work end */
 
@@ -1941,7 +1942,7 @@ button {
 
 .faq-answer {
   padding: 0 22px 22px;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.7;
   color: #555;
 }
@@ -1959,6 +1960,9 @@ button {
     padding: 14px;
     font-size: 16px;
     min-height: 46px;
+  }
+  .faq-answer {
+    font-size: 16px;
   }
 }
 
