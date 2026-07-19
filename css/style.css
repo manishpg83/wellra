@@ -1203,6 +1203,7 @@ button {
   .citrus-section .feature-card .media,
   .citrus-section .feature-card.reverse .media,
   .citrus-section .feature-card .media-gray {
+    flex: 0 0 auto;
     width: 100%;
     height: clamp(280px, 42vw, 350px);
     min-height: 0;
