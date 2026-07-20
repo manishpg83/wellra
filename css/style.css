@@ -452,6 +452,7 @@ button {
 
   .right {
     justify-content: center;
+    margin : unset
   }
 
   .juicer {
