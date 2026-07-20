@@ -249,32 +249,32 @@ require 'include/config.php';
 
     <div class="benefits-grid">
       <div class="benefit-card">
-        <img src="images/Gut-Health.png" alt="">
+        <img src="images/gut-health.png" alt="">
         <div class="benefit-label">Gut Health</div>
       </div>
 
       <div class="benefit-card">
-        <img src="images/Glowing.png" alt="">
+        <img src="images/glowing-skin.png" alt="">
         <div class="benefit-label">Glowing Skin</div>
       </div>
 
       <div class="benefit-card">
-        <img src="images/Natural.png" alt="">
+        <img src="images/natural-energy.png" alt="">
         <div class="benefit-label">Natural Energy</div>
       </div>
 
       <div class="benefit-card">
-        <img src="images/Immune.png" alt="">
+        <img src="images/immune-support.png" alt="">
         <div class="benefit-label">Immune Support</div>
       </div>
 
       <div class="benefit-card">
-        <img src="images/Antioxidant.png" alt="">
+        <img src="images/antioxidant-protection.png" alt="">
         <div class="benefit-label">Antioxidant Protection</div>
       </div>
 
       <div class="benefit-card">
-        <img src="images/Deep-Hydration.png" alt="">
+        <img src="images/deep-hydration.png" alt="">
         <div class="benefit-label">Deep Hydration</div>
       </div>
     </div>
