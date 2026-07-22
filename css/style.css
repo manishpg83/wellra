@@ -1726,13 +1726,13 @@ button {
   }
 
   .spec-item {
-    padding: 18px 12px;
+    padding: 18px 10px;
     text-align: center;
   }
 
   .spec-item h4,
   .spec-item p {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 24px;
   }
 }
