@@ -249,7 +249,7 @@ require 'include/config.php';
 
     <div class="benefits-grid">
       <div class="benefit-card">
-        <img src="images/gut-health.png" alt="">
+        <img src="images/guthealth.png" alt="">
         <div class="benefit-label">Gut Health</div>
       </div>
 
@@ -274,7 +274,7 @@ require 'include/config.php';
       </div>
 
       <div class="benefit-card">
-        <img src="images/deep-hydration.png" alt="">
+        <img src="images/deephydration.png" alt="">
         <div class="benefit-label">Deep Hydration</div>
       </div>
     </div>
