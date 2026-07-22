@@ -2,7 +2,7 @@
   <div class="vip-footer__inner">
     <div class="vip-footer__intro">
       <h2>Why Upgrade to VIP?</h2>
-      <p>Upgrade to VIP for priority access, exclusive early-bird pricing, and up to <span>42%</span> savings on Wellra PureSqueeze.</p>
+      <p>Upgrade to VIP for priority access, exclusive early-bird pricing, and up to <span>45%</span> savings on Wellra PureSqueeze.</p>
     </div>
 
     <div class="vip-footer__divider"></div>
