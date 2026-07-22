@@ -555,6 +555,9 @@ button {
     height: 43px;
     min-height: 43px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -696,7 +699,7 @@ button {
 
 .hero-video {
   width: 100%;
-  height: clamp(400px, 56.32vw, 811px);
+  /* height: clamp(400px, 56.32vw, 811px); */
   object-fit: cover;
   display: block;
 }

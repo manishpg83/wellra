@@ -295,7 +295,7 @@ require 'include/config.php';
 
         <div class="spec-item">
           <h4>Dimension</h4>
-          <p>10.2”(L) × 9.3”(W) × 18”(H)</p>
+          <p>10.2”(L)×9.3”(W)×18”(H)</p>
         </div>
 
         <div class="spec-item">
@@ -320,7 +320,7 @@ require 'include/config.php';
 
         <div class="spec-item">
           <h4>Rated Voltage</h4>
-          <p>AC120V / 220V, 50 / 60Hz</p>
+          <p>AC120V/220V, 50/60Hz</p>
         </div>
 
         <div class="spec-item">
