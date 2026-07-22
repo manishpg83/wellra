@@ -188,7 +188,7 @@ require 'include/config.php';
       <div class="content">
         <div class="img-bg">
           <h3>One Juicer Handles All Sizes With Squeezing Technology</h3>
-          <p>From small limes<br> to large grapefruits<br> with zero adapters.</p>
+          <p>From small limes to large<br> grapefruits with zero adapters.</p>
         </div>
       </div>
     </div>
