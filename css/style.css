@@ -555,9 +555,6 @@ button {
     height: 43px;
     min-height: 43px;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
 
