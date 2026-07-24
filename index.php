@@ -466,7 +466,7 @@ require 'include/config.php';
               stroke-linejoin="round" />
           </svg>
         </summary>
-        <div class="faq-answer">We plan to begin fulfillment shortly after the Kickstarter campaign closes. All backers will receive regular updates with production and shipping timelines.</div>
+        <div class="faq-answer">We plan to begin fulfilment in 2-3 months after the Kickstarter campaign closes. All backers will receive regular updates with production and shipping timelines.</div>
       </details>
       <details class="faq-item">
         <summary>Can I get a refund or cancel my pledge?
