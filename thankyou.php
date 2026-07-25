@@ -38,7 +38,7 @@ require 'include/config.php';
         <section class="hero-section" aria-label="Reservation confirmation">
             <div class="hero-shell">
                 <div class="hero-header">
-                    <img src="images/logo-new.png" class="brand-logo" alt="Wellra PureSqueeze">
+                    <a href="<?php echo BASE_URL;?>"><img src="images/logo-new.png" class="brand-logo" alt="Wellra PureSqueeze"></a>
                 </div>
 
                 <div class="hero-content">

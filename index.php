@@ -51,7 +51,7 @@ require 'include/config.php';
 
   <section class="hero">
     <div class="logo">
-      <img src="images/logo-new.png" alt="Wellra Logo">
+      <a href="<?php echo BASE_URL;?>"><img src="images/logo-new.png" alt="Wellra Logo"></a>
     </div>
 
     <div class="hero-content">
