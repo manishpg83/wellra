@@ -41,7 +41,6 @@ require 'include/config.php';
         Pledge $5 to reserve your spot and receive
         45% off on Wellra when we launch on Kickstarter
       </p>
-
       <div class="top-form">
         <input type="email" placeholder="Type your email here" required>
         <button>RESERVE NOW</button>
@@ -68,14 +67,14 @@ require 'include/config.php';
           squeezes, and juices for you.
         </p>
 
-        <div class="email-box">
+        <div class="email-box desktop-reserve">
           <form action="create-checkout-session.php" method="POST" novalidate>
             <input type="email" name="email" placeholder="Type your email here" required>
             <button type="submit">RESERVE NOW</button>
           </form>
         </div>
 
-        <p class="offer">
+        <p class="offer desktop-reserve">
           Reserve your spot for $5 and Get <span>45% off</span>
         </p>
       </div>
@@ -83,6 +82,25 @@ require 'include/config.php';
       <div class="right">
         <img src="images/juicer.png" alt="Juicer" class="juicer">
       </div>
+
+      <div class="mobile-reserve">
+
+        <div class="reserve-form">
+          <input type="email" placeholder="Type your email here" required>
+          <button type="submit">RESERVE NOW</button>
+        </div>
+
+        <!-- <div class="email-box">
+          <form action="create-checkout-session.php" method="POST" novalidate>
+            <input type="email" name="email" placeholder="Type your email here" required>
+            <button type="submit">RESERVE NOW</button>
+          </form>
+        </div> -->
+        <p class="offer">
+          Reserve your spot for $5 and Get <span>45% off</span>
+        </p>
+      </div>
+
     </div>
   </section>
 
