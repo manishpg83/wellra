@@ -438,7 +438,7 @@ button {
 
 .juicer {
   width: 100%;
-  max-width: 680px;
+ /*  max-width: 680px; */
   height: auto;
 }
 
@@ -479,9 +479,9 @@ button {
     margin : unset
   }
 
-  .juicer {
+ /*  .juicer {
     width: 420px;
-  }
+  } */
 }
 
 /* ---- MOBILE (from CSS 1) ---- */
@@ -526,7 +526,7 @@ button {
 
   .juicer {
     width: 100%;
-    max-width: 360px;
+  
   }
 }
 
