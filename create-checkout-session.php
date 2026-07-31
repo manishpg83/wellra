@@ -33,7 +33,7 @@ $session = \Stripe\Checkout\Session::create([
                 'name' => 'VIP reservation',
                 'description' => 'Reserve your Wellra Kickstarter VIP discount with a $5 deposit. You’ll receive exclusive launch pricing and a private Kickstarter link via email on launch day. Your $5 VIP reservation will be credited toward your purchase. Questions? Contact joshuakim@mywellra.com',
                 'images' => [
-                    'https://briskbraintech.com/projects/wellra/images/stripe-product.png'
+                    BASE_URL.'/images/stripe-product.png'
                 ],
             ],
             'unit_amount' => 2999,
@@ -43,37 +43,14 @@ $session = \Stripe\Checkout\Session::create([
     'quantity' => 1,
   ]],
   'customer_email' => $email,
-  'success_url' => 'https://briskbraintech.com/projects/wellra/thankyou.php',
-  'cancel_url'  => 'https://briskbraintech.com/projects/wellra/index.php',
+  'success_url' => BASE_URL.'/thankyou.php',
+  'cancel_url'  => BASE_URL.'/index.php',
 ]);
 
 header('Location: ' . $session->url);
 exit;
 
 function addToKlaviyo($email) {
-   /*  $url  = 'https://a.klaviyo.com/api/profiles/';
-    $data = [
-        'data' => [
-            'type' => 'profile',
-            'attributes' => [
-                'email' => $email,
-            ],
-        ],
-    ];
-
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, [
-        'Authorization: Klaviyo-API-Key ' . KLAVIYO_PRIVATE_KEY,
-        'Content-Type: application/json',
-        'revision: 2024-10-15'
-    ]);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-    $response = curl_exec($ch);
-    $status   = curl_getinfo($ch, CURLINFO_HTTP_CODE); */
-
     $listId = 'WceviV';
 
     $url = "https://a.klaviyo.com/api/profile-subscription-bulk-create-jobs/";
