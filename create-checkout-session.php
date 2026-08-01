@@ -15,8 +15,8 @@ if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     header('Location: index.php?error=email');
     exit;
 }
-
-addToKlaviyo($email);
+$listId = 'WceviV';
+addToKlaviyo($email, $listId);
 
 $session = \Stripe\Checkout\Session::create([
   'mode' => 'payment',
@@ -43,68 +43,8 @@ $session = \Stripe\Checkout\Session::create([
     'quantity' => 1,
   ]],
   'customer_email' => $email,
-  'success_url' => BASE_URL.'/thankyou.php',
+  'success_url' => BASE_URL.'/success.php?session_id={CHECKOUT_SESSION_ID}',
   'cancel_url'  => BASE_URL.'/index.php',
 ]);
-
 header('Location: ' . $session->url);
 exit;
-
-function addToKlaviyo($email) {
-    $listId = 'WceviV';
-
-    $url = "https://a.klaviyo.com/api/profile-subscription-bulk-create-jobs/";
-
-    $data = [
-        "data" => [
-            "type" => "profile-subscription-bulk-create-job",
-            "attributes" => [
-                "profiles" => [
-                    "data" => [
-                        [
-                            "type" => "profile",
-                            "attributes" => [
-                               'email' => $email
-                            ]
-                        ]
-                    ]
-                ]
-            ],
-            "relationships" => [
-                "list" => [
-                    "data" => [
-                        "type" => "list",
-                        "id" => $listId
-                    ]
-                ]
-            ]
-        ]
-    ];
-
-    $ch = curl_init($url);
-
-    curl_setopt_array($ch, [
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_POST => true,
-        CURLOPT_POSTFIELDS => json_encode($data),
-        CURLOPT_HTTPHEADER => [
-            'Authorization: Klaviyo-API-Key ' . KLAVIYO_PRIVATE_KEY,
-            'Content-Type: application/json',
-            'revision: 2024-10-15'
-        ]
-    ]);
-
-    $response = curl_exec($ch);
-    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-
-    curl_close($ch);
-
-    // 201 = created, 409 = already exists (both are fine for us)
-    if (curl_errno($ch)) {
-        error_log('Klaviyo curl error: ' . curl_error($ch));
-    } elseif ($status !== 201 && $status !== 409) {
-        error_log('Klaviyo API error (' . $status . '): ' . $response);
-    }
-
-    curl_close($ch);
-}
