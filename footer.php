@@ -11,8 +11,6 @@
       <p class="vip-footer__copyright">Copyright &copy; <?php echo date('Y'); ?> A Common Thread, Inc. <span class="vip-footer__rights">All Rights Reserved</span></p>
 
       <div class="vip-footer__powered">
-        <p>Powered by</p>
-        <img src="images/agency20.png" alt="Agency 2.0">
       </div>
 
       <p class="vip-footer__links">Privacy Policy | Terms and Conditions</p>

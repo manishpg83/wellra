@@ -660,7 +660,7 @@ button {
   background: #faf8f4;
 }
 
-.steps-section h2, .features-section h2 {
+.steps-section h2 {
   text-align: center;
   max-width: 714px;
   margin: 0 auto 60px;
@@ -717,7 +717,7 @@ button {
     padding: 50px var(--page-x-padding);
   }
 
-  .steps-section h2, .features-section h2{
+  .steps-section h2 {
     font-size: 32px;
   }
 
@@ -736,7 +736,7 @@ button {
     gap: 30px;
   }
 
-  .steps-section h2, .features-section h2 {
+  .steps-section h2 {
     font-size: 26px;
   }
 

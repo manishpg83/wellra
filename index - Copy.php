@@ -145,7 +145,7 @@ require 'include/config.php';
   </section>
 
   <section class="features-section">
-    <h2>Features</h2>
+
     <div class="feature-grid">
 
       <div class="feature-tile">
@@ -163,7 +163,7 @@ require 'include/config.php';
       </div>
 
       <div class="feature-tile">
-        <img src="images/feat_dishwasher.jpg" alt="Dishwasher-Safe Components">
+        <img src="images/feat_dishwasher.png" alt="Dishwasher-Safe Components">
         <div class="tile-label">
           Dishwasher-Safe Components
         </div>
