@@ -13,8 +13,8 @@ if(isset($session->payment_status) && $session->payment_status === 'paid') {
     
     if(isset($session->customer_email)) {
         $email = $session->customer_email;
-        /* $listId = 'WceviV';
-        addToKlaviyo($email, $listId);  */
+        $listId = 'S8GmyS'; // Replace with your Klaviyo list ID
+        addToKlaviyo($email, $listId); 
     }     
     header('Location: ' . BASE_URL . '/thankyou.php');
     exit;  
