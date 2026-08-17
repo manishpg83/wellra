@@ -280,8 +280,7 @@ require 'include/config.php';
 
   <section class="benefits-section">
     <h2>One Glass - Six Powerful Benefits</h2>
-
-    <!-- <div class="benefits-grid">
+    <div class="benefits-grid">
       <div class="benefit-card hydration">
         <div class="benefit-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -340,7 +339,7 @@ require 'include/config.php';
         </div>
         <div class="benefit-label">Glowing Skin</div>
       </div>
-    </div> -->
+    </div>
   </section>
 
   <section class="specifications">
