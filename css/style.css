@@ -1543,10 +1543,8 @@ button {
   .citrus-section .feature-card h3 {
     width: 100%;
     max-width: 250px;
-
     margin: 0 0 6px;
-
-    font-size: 16px;
+    font-size: 18px;
     line-height: 18px;
     font-weight: 700;
     letter-spacing: -0.3px;
@@ -1557,10 +1555,8 @@ button {
   .citrus-section .feature-card.orange p {
     width: 100%;
     max-width: 250px;
-
     margin: 0;
-
-    font-size: 14px;
+    font-size: 16px;
     line-height: 19px;
     font-weight: 400;
     letter-spacing: -0.2px;

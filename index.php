@@ -292,10 +292,7 @@ require 'include/config.php';
       </div>
       <div class="benefit-card gut">
         <div class="benefit-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M8 3.5c0 2 3 2 3 4s-3 2-3 4 3 2 3 4-3 2-3 4" />
-            <path d="M13 3.5c0 2 3 2 3 4s-3 2-3 4 3 2 3 4" />
-          </svg>
+          <img src="images/gut-health.png" alt="Gut Health">
         </div>
         <div class="benefit-label">Gut Health</div>
       </div>
@@ -332,10 +329,7 @@ require 'include/config.php';
       </div>
       <div class="benefit-card skin">
         <div class="benefit-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 3.5c3 0 5.2 2.2 5.2 5 0 1-.5 1.8-.5 2.8 0 1.8 1.5 2.3 1.5 2.3s-1 1-2.3 1c-.2 2-1.8 3-3.7 3-2.5 0-4.2-2-4.2-4.6V8.3c0-2.7 1.7-4.8 4-4.8z" />
-            <path d="M17.5 3.5 18 5l1.5.5L18 6l-.5 1.5L17 6l-1.5-.5L17 5l.5-1.5z" />
-          </svg>
+          <img src="images/skin.png" alt="Glowing Skin">
         </div>
         <div class="benefit-label">Glowing Skin</div>
       </div>
