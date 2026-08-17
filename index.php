@@ -548,6 +548,15 @@ require 'include/config.php';
         <div class="faq-answer">Follow our Kickstarter updates and join our VIP Facebook Group for exclusive behind-the-scenes access, product tips, and early discount opportunities.
         </div>
       </details>
+      <details class="faq-item">
+        <summary>What countries will Wellra be shipped to?
+          <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </summary>
+        <div class="faq-answer">Wellra will be shipped worldwide, except to India.</div>
+      </details>
     </div>
   </section>
 
