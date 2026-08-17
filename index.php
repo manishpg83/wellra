@@ -340,7 +340,7 @@ require 'include/config.php';
         </div>
         <div class="benefit-label">Glowing Skin</div>
       </div>
-    </div -->>
+    </div> -->
   </section>
 
   <section class="specifications">
