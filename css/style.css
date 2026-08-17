@@ -49,12 +49,12 @@ body {
 }
 
 .top-bar-text {
-  max-width: 480px;
+  max-width: 500px;
 }
 
 .top-bar-text h3 {
   margin: 0 0 29px;
-  font-size: clamp(24px, 2.5vw, 32px);
+  font-size: clamp(24px, 2.5vw, 36px);
   line-height: 1.2;
   font-weight: 700;
   color: #fff;
@@ -62,9 +62,9 @@ body {
 
 .top-bar p {
   margin: 0;
-  width: 480px;
+  width: 500px;
   max-width: 100%;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 23px;
   letter-spacing: -0.32px;
   text-align: justify;
