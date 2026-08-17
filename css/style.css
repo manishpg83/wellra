@@ -1594,47 +1594,57 @@ button {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, minmax(240px, 1fr));
-  gap: 59px;
+  gap: 32px 40px;
 }
 
 .benefit-card {
   position: relative;
-  aspect-ratio: 396 / 234;
-  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  min-height: 130px;
+  padding: 0 40px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
 
 .benefit-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.benefit-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+.benefit-card.hydration { background: linear-gradient(90deg, #F2994A 0%, #FBC98C 100%); }
+.benefit-card.gut { background: linear-gradient(90deg, #F26B5E 0%, #F6ABA0 100%); }
+.benefit-card.antioxidant { background: linear-gradient(90deg, #F2C230 0%, #F5E48F 100%); }
+.benefit-card.energy { background: linear-gradient(90deg, #8CA83E 0%, #C3D588 100%); }
+.benefit-card.immune { background: linear-gradient(90deg, #F17868 0%, #F6B4AA 100%); }
+.benefit-card.skin { background: linear-gradient(90deg, #D9DA4E 0%, #EFF0A6 100%); }
 
-.benefit-label {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 68px;
-  background: linear-gradient(269deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.55));
-  border-radius: 0 0 12px 12px;
+.benefit-icon {
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 16px;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.85);
   color: #fff;
-  font-size: 25px;
+}
+
+.benefit-icon svg {
+  width: 44px;
+  height: 44px;
+}
+
+.benefit-label {
+  color: #fff;
+  font-size: 30px;
   font-weight: 700;
-  line-height: 32px;
-  text-align: center;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
 }
 
 @media (max-width: 992px) {
@@ -1644,11 +1654,31 @@ button {
 
   .benefits-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 24px;
   }
 
   .benefits-section h2 {
     font-size: 30px;
+  }
+
+  .benefit-card {
+    min-height: 110px;
+    padding: 0 28px;
+    gap: 20px;
+  }
+
+  .benefit-icon {
+    width: 68px;
+    height: 68px;
+  }
+
+  .benefit-icon svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .benefit-label {
+    font-size: 22px;
   }
 }
 
@@ -1664,20 +1694,28 @@ button {
   }
 
   .benefits-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 14px;
   }
 
   .benefit-card {
-    aspect-ratio: 4 / 3;
+    min-height: 90px;
+    padding: 0 18px;
+    gap: 14px;
+  }
+
+  .benefit-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .benefit-icon svg {
+    width: 26px;
+    height: 26px;
   }
 
   .benefit-label {
-    height: auto;
-    min-height: 44px;
-    font-size: 13px;
-    line-height: 1.25;
-    padding: 8px 8px;
+    font-size: 18px;
   }
 }
 

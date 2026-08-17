@@ -282,29 +282,63 @@ require 'include/config.php';
     <h2>One Glass - Six Powerful Benefits</h2>
 
     <div class="benefits-grid">
-      <div class="benefit-card">
-        <img src="images/guthealth.png" alt="">
+      <div class="benefit-card hydration">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3S6 10.2 6 14.5a6 6 0 1 0 12 0C18 10.2 12 3 12 3z" />
+            <path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5" />
+          </svg>
+        </div>
+        <div class="benefit-label">Deep Hydration</div>
+      </div>
+      <div class="benefit-card gut">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 3.5c0 2 3 2 3 4s-3 2-3 4 3 2 3 4-3 2-3 4" />
+            <path d="M13 3.5c0 2 3 2 3 4s-3 2-3 4 3 2 3 4" />
+          </svg>
+        </div>
         <div class="benefit-label">Gut Health</div>
       </div>
-      <div class="benefit-card">
-        <img src="images/glowing-skin.png" alt="">
-        <div class="benefit-label">Glowing Skin</div>
-      </div>
-      <div class="benefit-card">
-        <img src="images/immune-support.png" alt="">
-        <div class="benefit-label">Immune Support</div>
-      </div>
-      <div class="benefit-card">
-        <img src="images/natural-energy.png" alt="">
-        <div class="benefit-label">Natural Energy</div>
-      </div>
-      <div class="benefit-card">
-        <img src="images/antioxidant-protection.png" alt="">
+      <div class="benefit-card antioxidant">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3.5 18 7v7l-6 3.5L6 14V7l6-3.5z" />
+            <circle cx="12" cy="3.5" r="1" />
+            <circle cx="18" cy="7" r="1" />
+            <circle cx="18" cy="14" r="1" />
+            <circle cx="12" cy="17.5" r="1" />
+            <circle cx="6" cy="14" r="1" />
+            <circle cx="6" cy="7" r="1" />
+          </svg>
+        </div>
         <div class="benefit-label">Antioxidant Protection</div>
       </div>
-      <div class="benefit-card">
-        <img src="images/deephydration.png" alt="">
-        <div class="benefit-label">Deep Hydration</div>
+      <div class="benefit-card energy">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" />
+          </svg>
+        </div>
+        <div class="benefit-label">Natural Energy</div>
+      </div>
+      <div class="benefit-card immune">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2.5 20 5.5v5.8c0 5-3.5 8.6-8 10.2-4.5-1.6-8-5.2-8-10.2V5.5l8-3z" />
+            <path d="M12 8v6M9 11h6" />
+          </svg>
+        </div>
+        <div class="benefit-label">Immune Support</div>
+      </div>
+      <div class="benefit-card skin">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 3.5c3 0 5.2 2.2 5.2 5 0 1-.5 1.8-.5 2.8 0 1.8 1.5 2.3 1.5 2.3s-1 1-2.3 1c-.2 2-1.8 3-3.7 3-2.5 0-4.2-2-4.2-4.6V8.3c0-2.7 1.7-4.8 4-4.8z" />
+            <path d="M17.5 3.5 18 5l1.5.5L18 6l-.5 1.5L17 6l-1.5-.5L17 5l.5-1.5z" />
+          </svg>
+        </div>
+        <div class="benefit-label">Glowing Skin</div>
       </div>
     </div>
   </section>
