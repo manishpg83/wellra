@@ -35,7 +35,7 @@ require 'include/config.php';
 
 <body>
 
-  <header class="top-bar">
+  <!-- <header class="top-bar">
     <div class="top-bar-inner">
       <p>
         Pledge $5 to reserve your spot and receive
@@ -46,7 +46,7 @@ require 'include/config.php';
         <button>RESERVE NOW</button>
       </div>
     </div>
-  </header>
+  </header> -->
 
   <section class="hero">
     <div class="logo">
@@ -189,12 +189,28 @@ require 'include/config.php';
           Built With Durable Material And Thoughtful Design
         </div>
       </div>
-
     </div>
-
   </section>
 
-    <section class="citrus-section">
+  <section class="hero">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-text">
+          <h3>Get An Exclusive Discount</h3>
+          <p>
+            Pledge $5 to reserve your spot and receive
+            42% off on Wellra when we launch on Kickstarter
+          </p>
+        </div>
+        <div class="top-form">
+          <input type="email" placeholder="Type your email here" required>
+          <button>GET LAUNCH INVITE</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="citrus-section">
 
     <h2>Every Citrus. Zero Adapters.</h2>
 

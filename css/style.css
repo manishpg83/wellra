@@ -34,24 +34,30 @@ body {
 }
 
 /* ========================= TOP BAR ========================= */
-.top-bar {
-  width: 100%;
-  background: #000;
-  padding-left: var(--page-x-padding);
-  padding-right: var(--page-x-padding);
-}
 
 .top-bar-inner {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 30px;
-  padding: 15px 0;
+  padding: 30px 0;
   flex-wrap: wrap;
   width: 100%;
   max-width: var(--page-max-width);
   margin: 0 auto;
   min-height: 93px;
+}
+
+.top-bar-text {
+  max-width: 480px;
+}
+
+.top-bar-text h3 {
+  margin: 0 0 12px;
+  font-size: clamp(24px, 2.5vw, 32px);
+  line-height: 1.2;
+  font-weight: 700;
+  color: #fff;
 }
 
 .top-bar p {
@@ -63,7 +69,6 @@ body {
   letter-spacing: -0.32px;
   text-align: justify;
   text-decoration: underline;
-  color: #AFAFAF;
 }
 
 .top-bar span {
@@ -72,18 +77,16 @@ body {
 
 .top-form {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
   gap: 14px;
-  flex-wrap: wrap;
-  width: 572px;
+  width: 380px;
   max-width: 100%;
-  height: 43px;
 }
 
 .top-form input {
-  flex: 1;
-  min-width: 220px;
-  height: 100%;
+  width: 100%;
+  height: 50px;
   padding: 0 15px;
   border: none;
   border-radius: 8px;
@@ -98,8 +101,8 @@ body {
 }
 
 .top-form button {
-  min-width: 157px;
-  height: 100%;
+  width: 100%;
+  height: 50px;
   border: none;
   border-radius: 8px;
   background: #b7d869;
@@ -140,7 +143,7 @@ body {
 
 @media (max-width: 480px) {
   .top-form {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .top-form input,
@@ -509,7 +512,6 @@ button {
 
 /* ---- MOBILE (from CSS 1) ---- */
 @media (max-width: 768px) {
-  .top-form,
   .email-box {
     flex-direction: row;
     width: 100%;
