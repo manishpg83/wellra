@@ -34,20 +34,6 @@ require 'include/config.php';
 </head>
 
 <body>
-
-  <!-- <header class="top-bar">
-    <div class="top-bar-inner">
-      <p>
-        Pledge $5 to reserve your spot and receive
-        45% off on Wellra when we launch on Kickstarter
-      </p>
-      <div class="top-form">
-        <input type="email" placeholder="Type your email here" required>
-        <button>RESERVE NOW</button>
-      </div>
-    </div>
-  </header> -->
-
   <section class="hero">
     <div class="logo">
       <a href="<?php echo BASE_URL;?>"><img src="images/logo-new.png" alt="Wellra Logo"></a>
@@ -70,7 +56,7 @@ require 'include/config.php';
         <div class="email-box desktop-reserve">
           <form action="create-checkout-session.php" method="POST" novalidate>
             <input type="email" name="email" placeholder="Type your email here" required>
-            <button type="submit">RESERVE NOW</button>
+            <button type="submit">RESERVE VIP ACCESS</button>
           </form>
         </div>
 
@@ -87,7 +73,7 @@ require 'include/config.php';
 
         <div class="reserve-form">
           <input type="email" placeholder="Type your email here" required>
-          <button type="submit">RESERVE NOW</button>
+          <button type="submit">RESERVE VIP ACCESS</button>
         </div>
 
         <!-- <div class="email-box">
@@ -204,7 +190,7 @@ require 'include/config.php';
         </div>
         <div class="top-form">
           <input type="email" placeholder="Type your email here" required>
-          <button>GET LAUNCH INVITE</button>
+          <button>Reserve VIP Access</button>
         </div>
       </div>
     </div>
@@ -572,7 +558,7 @@ require 'include/config.php';
 
         <div class="reserve-form">
           <input type="email" placeholder="Type your email here" required>
-          <button type="submit">RESERVE NOW</button>
+          <button type="submit">RESERVE VIP ACCESS</button>
         </div>
       </div>
     </div>

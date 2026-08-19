@@ -64,7 +64,7 @@ body {
   margin: 0;
   width: 500px;
   max-width: 100%;
-  font-size: 19px;
+  font-size: 18px;
   line-height: 23px;
   letter-spacing: -0.32px;
   text-align: justify;
@@ -90,7 +90,7 @@ body {
   border: none;
   border-radius: 8px;
   background: #ebebeb;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: -0.32px;
   color: #76767a;
 }
@@ -106,7 +106,7 @@ body {
   border-radius: 8px;
   background: #b7d869;
   color: #222;
-  font-size: 19px;
+  font-size: 18px;
   letter-spacing: -0.32px;
   text-transform: uppercase;
   font-weight: normal;
@@ -140,6 +140,7 @@ body {
 
   .top-form input {
     flex: 1;
+    padding: 15px;
     /* width: 100%; */
   }
 }
@@ -410,7 +411,7 @@ button {
   border: none;
   outline: none;
   background: transparent;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: -0.32px;
   color: #76767a;
 }
@@ -422,7 +423,7 @@ button {
   border-radius: 0 10px 10px 0;
   background: #b7d869;
   color: #222;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: -0.32px;
   text-transform: uppercase;
   font-weight: normal;
@@ -469,7 +470,7 @@ button {
 }
 @media (max-width: 576px) { 
   .top-bar {
-    padding: 1px var(--page-x-padding) 59px;
+    padding: 1px var(--page-x-padding) 10px;
   }
 }
 /* ---- TABLET (from CSS 1) ---- */
@@ -584,20 +585,22 @@ button {
     width: 100%;
     padding: 6px 0;
     letter-spacing: -0.28px;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .mobile-reserve .reserve-form button {
     width: 100%;
-    height: 35px;
+    height: 42px;
     display: flex;
     justify-content: center;
     text-align: center;
     padding: 20px;
     border-radius: 3px;
     letter-spacing: -0.28px;
-    font-size: 14px;
+    font-size: 16px;
   }
+
+  .top-bar p, .top-form button, .top-form input { font-size: 16px;}
 }
 
 /* Clean stacking for the hero email box on very small screens
@@ -1610,12 +1613,12 @@ button {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.benefit-card.hydration { background: linear-gradient(90deg, #F2994A 0%, #FBC98C 100%); }
+.benefit-card.hydration { background: linear-gradient(90deg, #F2994A 0%, #F9AF4E 100%); }
 .benefit-card.gut { background: linear-gradient(90deg, #F26B5E 0%, #F6ABA0 100%); }
-.benefit-card.antioxidant { background: linear-gradient(90deg, #F2C230 0%, #F5E48F 100%); }
-.benefit-card.energy { background: linear-gradient(90deg, #8CA83E 0%, #C3D588 100%); }
-.benefit-card.immune { background: linear-gradient(90deg, #F17868 0%, #F6B4AA 100%); }
-.benefit-card.skin { background: linear-gradient(90deg, #D9DA4E 0%, #EFF0A6 100%); }
+.benefit-card.antioxidant { background: linear-gradient(90deg, #F2C230 0%, #FBDA7C 100%); }
+.benefit-card.energy { background: linear-gradient(90deg, #8CA83E 0%, #BCCA7F 100%); }
+.benefit-card.immune { background: linear-gradient(90deg, #F17868 0%, #F7AA9A 100%); }
+.benefit-card.skin { background: linear-gradient(90deg, #D9DA4E 0%, #E7E380 100%); }
 
 .benefit-icon {
   flex: 0 0 auto;
@@ -2262,7 +2265,7 @@ button {
   outline: none;
   background: transparent;
   padding: 0;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: -0.32px;
   color: #76767a;
 }
@@ -2274,7 +2277,7 @@ button {
   background: #b7d869;
   color: #222;
   padding: 0 20px;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: -0.32px;
   text-transform: uppercase;
   font-weight: normal;
@@ -2337,7 +2340,7 @@ button {
     width: 100%;
     padding: 6px 0;
     letter-spacing: -0.28px;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .reserve-form button {
@@ -2349,6 +2352,10 @@ button {
     padding: 20px;
     border-radius: 3px;
     letter-spacing: -0.28px;
-    font-size: 14px;
+    font-size: 16px;
   }
+  .top-bar p, .top-form button, .top-form input { font-size: 16px;}
+}
+@media (max-width: 992px) {
+  .reserve-form input, .reserve-form button { font-size: 16px;}
 }
