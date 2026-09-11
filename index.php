@@ -185,7 +185,7 @@ require 'include/config.php';
           <h3>Get An Exclusive Discount</h3>
           <p>
             Pledge $5 to reserve your spot and receive
-            42% off on Wellra when we launch on Kickstarter
+            45% off on Wellra when we launch on Kickstarter
           </p>
         </div>
         <div class="top-form">
